@@ -115,7 +115,6 @@ int main(int argc, char* argv[]){
 
     ifstream input;
     ofstream output;
-    //input.open(argv[1]);
     
     
     if(input.fail()){
@@ -123,52 +122,12 @@ int main(int argc, char* argv[]){
         exit(1);
     }
     
-    /*
-    string operation;
-    int num;
-    //while input is not at the end of file (eof)
-    
-    while(!input.eof()){
-        input >> operation >> num;
-        cout << "op:" << operation << " Num:"<< num <<endl;
-    }
-    
-   input.close();
-   */
    input.open(argv[1]);
-   
    output.open(argv[2]);
 
    LLstack* stk = new LLstack();
    stk->buildStack(input,output);
-   cout<< stk->top << endl;
 
-   /*
-    LLstack* stk = new LLstack();
-    stk->push(new listNode(1));
-    stk->push(new listNode(2));
-    stk->push(new listNode(3));
-    stk->push(new listNode(4));
-    stk->push(new listNode(5));
-    stk->push(new listNode(6));
-    stk->push(new listNode(7));
-    stk->push(new listNode(8));
-
-    int i =0;
-    while(i < 4){
-        cout<< stk->pop() << endl;
-        i++;
-    }
-    */
-    
-    //stk->buildStack(input,output);
-
-    /*
-    listNode* head = new listNode(69);
-    listNode* node = new listNode(55);
-    head->next = node;
-    cout << "hello "<<head->printNode(head) << endl;
-    */
 
     input.close();
     output.close();
