@@ -17,18 +17,17 @@ class listNode{
         val = data;
     }
 
-    string printNode(listNode* node){
+    void printNode(listNode* node, ofstream &output){
         //(node's data, data of node's next) ->
         string nodeStr ="";
         if(node->next == NULL){
-            nodeStr+="("+ to_string(node->val)+"," + "NULL ) ->";
+            //nodeStr+="("+ to_string(node->val)+"," + "NULL ) ->";
+            output << "(" << node->val << ", NULL) ->";
         }else{
-            nodeStr+="("+ to_string(node->val)+"," + to_string(node->next->val)+") ->";
+            //nodeStr+="("+ to_string(node->val)+"," + to_string(node->next->val)+") ->";
+            output << "(" << node->val << ","<< node->next->val << ") ->";
         }
         
-        
-
-        return nodeStr;
     }
 };
 
@@ -59,18 +58,18 @@ class LLstack{
     }
     // if stack is empty returns null, otherwise deletes and returns the top node of Stack.
     //make return type listNode*
-    int pop(){
+    listNode* pop(){
         //if stack is empty
         listNode* temp = new listNode(-9999);
         temp = top->next;
         if(isEmpty()){
-            return -9999;
+            return NULL;
         }else{
             top->next = top->next->next;
             size--;
         }
 
-        return temp->val;
+        return temp;
     }
     
     //need to finish
@@ -78,14 +77,15 @@ class LLstack{
         listNode* temp = stk->top;
         outputFile << "Top ->";
         while(temp->next != NULL){
-            outputFile << temp->printNode(temp);
+            //outputFile << temp->printNode(temp,outputFile);
+            temp->printNode(temp,outputFile);
             temp = temp->next;
         }
 
        outputFile << "NULL" <<  endl;
          
     }
-    //change junk = stk->pop()
+
     void buildStack(ifstream &inFile, ofstream &outFile){
         LLstack* stk = new LLstack();
         listNode* junk = NULL;
@@ -99,7 +99,7 @@ class LLstack{
                 outFile << "Added " << num << endl;
             }else{
                 junk = new listNode(num);
-                outFile << "Removed" << num << endl;
+                outFile << "Removed " << num << endl;
             }
             
             printStack(outFile,stk);
