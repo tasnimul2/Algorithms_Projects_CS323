@@ -91,15 +91,17 @@ class LLstack{
         listNode* junk = NULL;
         string operation;
         int num;
+        
+        //while not at end of file (eof) real file input line by line
         while(!inFile.eof()){
             
             inFile >> operation >> num;
-            if(operation == "+"){
+            if(operation == "+" || operation != "-" ){ //operation != "-" is used to combat the initial white space ifstream reads
                 stk->push(new listNode(num));
                 outFile << "Added " << num << endl;
-            }else{
-                junk = new listNode(num);
-                outFile << "Removed " << num << endl;
+            }else if(operation == "-") {
+                junk = stk->pop();
+                outFile << "Removed " << junk->val << endl;
             }
             
             printStack(outFile,stk);
@@ -115,15 +117,19 @@ int main(int argc, char* argv[]){
 
     ifstream input;
     ofstream output;
-    
-    
+
+    input.open(argv[1]);
     if(input.fail()){
-        cout<< "File failed to open, make sure file name is typed correctly"<<endl;
+        cout<< "File failed to open, make sure input file name is typed correctly"<<endl;
         exit(1);
     }
+         
+         
     
-   input.open(argv[1]);
-   output.open(argv[2]);
+
+    
+    
+    output.open(argv[2]);
 
    LLstack* stk = new LLstack();
    stk->buildStack(input,output);
