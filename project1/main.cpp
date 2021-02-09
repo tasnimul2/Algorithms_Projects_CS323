@@ -9,12 +9,13 @@ using namespace std;
 class listNode{
     public:
     int val;
-    listNode* next = NULL;
+    listNode* next;
     listNode(){
 
     }
     listNode(int data){
         val = data;
+        next = NULL;
     }
 
     void printNode(listNode* node, ofstream &output){
@@ -33,14 +34,15 @@ class listNode{
 //--------------------- LLStack -------------------------//
 class LLstack{
     private:
-    
+    int size;
     public:
 
     listNode* top;
-    int size = 0;
+    
     LLstack(){
         top = new listNode(-9999);
         top->next = NULL;
+        size = 0;
     }
 
     bool isEmpty(){
@@ -116,7 +118,7 @@ class LLstack{
 
 class LLqueue{
     private:
-    int size = 0;
+    int size;
     public:
     listNode* head;// head always points to the dummy node!
     listNode* tail;// tail always points to the last node of the queue; tail points to dummy initially.
@@ -128,6 +130,7 @@ class LLqueue{
         dummy->next = NULL;
         head = dummy;
         tail= dummy;
+        size = 0;
     }
 
     void buildQueue(ifstream &inFile, ofstream &outFile){
@@ -200,6 +203,41 @@ class LLqueue{
         }
 
        outFile << "NULL" <<  endl;
+    }
+
+};
+
+//--------------------- LList Class----------------------------------//
+class LList{
+    private:
+    int size;
+
+    public:
+    listNode* listHead; // always points to the dummy node
+
+    // create new list with a dummy node, set the data in the dummy node to -9999. and let
+    //listHead points to the dummy node.
+    LList(){
+        size = 0;
+    }
+
+    void buildList(ifstream &inFile, ofstream &outFile){
+        
+    }
+    //algorithm used from class notes
+    void listInsert(listNode* node){
+
+    }
+    // First, searches a node in the list that contains data; if such node exits,
+    //deletes the node from the list and returns the deleted node, otherwise, returns null.
+    listNode* deleteOneNode(int val){
+        
+        return new listNode(-9999);
+    }
+    // Output to outFile3, the entire list, including the dummy node, by calling pirntNode(...) until at the end of the list,
+    //using the following format: listHead -->(-9999, next’s data1)--> ( data, next’s data)...... --> ( data, NULL)--> NULL
+    void printList(ofstream &outFile, LList* list){
+
     }
 
 };
