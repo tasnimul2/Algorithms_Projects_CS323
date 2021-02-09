@@ -131,6 +131,24 @@ class LLqueue{
     }
 
     void buildQueue(ifstream &inFile, ofstream &outFile){
+        LLqueue*  que = new LLqueue();
+        listNode* junk = NULL;
+        string operation;
+        int num;
+
+        while(!inFile.eof()){
+            inFile >> operation >> num;
+            if(operation =="+" || operation !="-"){
+                que->insertQ(new listNode(num));
+                outFile<<"Added " << num << endl;
+            }else if(operation == "-"){
+                junk = que->deleteQ();
+                outFile <<"Deleted " << junk->val << endl;
+            }
+
+            printQ(outFile,que);
+
+        }
 
     }
 
@@ -172,8 +190,16 @@ class LLqueue{
 
     // DOES NOT delete nodes in Queue! Outputs to outFile2, the entire Q, including the dummy
     //node, you may call printNode (...) using the following format:
-    void printQ(ofstream &outFile){
+    void printQ(ofstream &outFile, LLqueue* que){
+        listNode* temp = que->head;
+        outFile << "Top ->";
+        while(temp->next != NULL){
+            //outputFile << temp->printNode(temp,outputFile);
+            temp->printNode(temp,outFile);
+            temp = temp->next;
+        }
 
+       outFile << "NULL" <<  endl;
     }
 
 };
@@ -188,11 +214,6 @@ int main(int argc, char* argv[]){
         cout<< "File failed to open, make sure input file name is typed correctly"<<endl;
         exit(1);
     }
-         
-         
-    
-
-    
     
     output.open(argv[2]);
 
@@ -201,7 +222,12 @@ int main(int argc, char* argv[]){
    input.close();
    output.close();
 
+   input.open(argv[1]);
+   output.open(argv[3]);
    LLqueue* que = new LLqueue();
+
+   que->buildQueue(input,output);
+
    que->insertQ(new listNode(1));
    que->insertQ(new listNode(2));
    que->insertQ(new listNode(3));
