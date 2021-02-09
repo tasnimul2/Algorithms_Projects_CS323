@@ -218,6 +218,8 @@ class LList{
     // create new list with a dummy node, set the data in the dummy node to -9999. and let
     //listHead points to the dummy node.
     LList(){
+        listNode* dummy = new listNode(-9999);
+        listHead = dummy;
         size = 0;
     }
 
@@ -226,7 +228,7 @@ class LList{
     }
     //algorithm used from class notes
     void listInsert(listNode* node){
-
+        
     }
     // First, searches a node in the list that contains data; if such node exits,
     //deletes the node from the list and returns the deleted node, otherwise, returns null.
