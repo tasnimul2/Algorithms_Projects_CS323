@@ -20,13 +20,10 @@ class listNode{
 
     void printNode(listNode* node, ofstream &output){
         //(node's data, data of node's next) ->
-        string nodeStr ="";
         if(node->next == NULL){
-            //nodeStr+="("+ to_string(node->val)+"," + "NULL ) ->";
-            output << "(" << node->val << ", NULL) ->";
+            output << "(" << node->val << ", NULL) -->";
         }else{
-            //nodeStr+="("+ to_string(node->val)+"," + to_string(node->next->val)+") ->";
-            output << "(" << node->val << ","<< node->next->val << ") ->";
+            output << "(" << node->val << ","<< node->next->val << ") -->";
         }
         
     }
@@ -77,14 +74,13 @@ class LLstack{
     //need to finish
     void printStack(ofstream &outputFile, LLstack* stk){
         listNode* temp = stk->top;
-        outputFile << "Top ->";
+        outputFile << "Top -->";
         while(temp->next != NULL){
-            //outputFile << temp->printNode(temp,outputFile);
             temp->printNode(temp,outputFile);
             temp = temp->next;
         }
-
-       outputFile << "NULL" <<  endl;
+        outputFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
+        
          
     }
 
@@ -195,14 +191,14 @@ class LLqueue{
     //node, you may call printNode (...) using the following format:
     void printQ(ofstream &outFile, LLqueue* que){
         listNode* temp = que->head;
-        outFile << "Top ->";
+        outFile << "Top -->";
         while(temp->next != NULL){
             //outputFile << temp->printNode(temp,outputFile);
             temp->printNode(temp,outFile);
             temp = temp->next;
         }
 
-       outFile << "NULL" <<  endl;
+       outFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
     }
 
 };
@@ -224,22 +220,95 @@ class LList{
     }
 
     void buildList(ifstream &inFile, ofstream &outFile){
-        
+        LList*  list = new LList();
+        listNode* junk = NULL;
+        string operation;
+        int num;
+
+        while(!inFile.eof()){
+            inFile >> operation >> num;
+            if(operation =="+" || operation !="-"){
+                list->listInsert(new listNode(num));
+                outFile<<"Added " << num << endl;
+            }else if(operation == "-"){
+                junk = list->deleteOneNode(num);
+                if(junk == NULL){
+                    outFile <<"Sorry, " <<num<<" is not in the list (Cannot Remove)" << endl;
+                }else{
+                    outFile <<"Deleted " << junk->val << endl;
+                }
+                
+            }
+
+            printList(outFile,list);
+
+        }
     }
     //algorithm used from class notes
     void listInsert(listNode* node){
-        
+        bool nodeInserted = false;
+        listNode* temp = listHead;
+        while(temp->next != NULL ){
+            if(temp->val == node->val){
+                node->next = temp->next;
+                temp->next = node;
+                size++;
+                nodeInserted = true;
+                break;
+            }else if(temp->next->val > node->val){
+                node->next = temp->next;
+                temp->next = node;
+                nodeInserted = true;
+                break;
+            }
+
+            temp = temp->next;
+        }
+        if(!nodeInserted){
+            node->next = temp->next;
+            temp->next = node;
+        }
+        //listHead = temp;
     }
+
     // First, searches a node in the list that contains data; if such node exits,
     //deletes the node from the list and returns the deleted node, otherwise, returns null.
-    listNode* deleteOneNode(int val){
+    listNode* deleteOneNode(int nodeData){
+        listNode* junk = new listNode(-9999);
+        listNode* temp = listHead;
+
+        while(temp->next != NULL){
+            if(temp->next->val == nodeData){
+                temp->next = temp->next->next;
+                junk = temp->next;
+                size--;
+                return junk; //end the loop so other nodes with the same value dont get removed. 
+            }
+            temp = temp->next;
+        }
         
-        return new listNode(-9999);
+        junk = NULL;
+        return junk;
     }
     // Output to outFile3, the entire list, including the dummy node, by calling pirntNode(...) until at the end of the list,
     //using the following format: listHead -->(-9999, next’s data1)--> ( data, next’s data)...... --> ( data, NULL)--> NULL
     void printList(ofstream &outFile, LList* list){
+        listNode* temp = list->listHead;
+        outFile << "listHead -->";
+        while(temp->next != NULL){
+            //outputFile << temp->printNode(temp,outputFile);
+            temp->printNode(temp,outFile);
+            temp = temp->next;
+        }
 
+       outFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
+    }
+
+    bool isEmpty(){
+        if(size == 0){
+            return true;
+        }
+        return false;
     }
 
 };
@@ -267,19 +336,15 @@ int main(int argc, char* argv[]){
    LLqueue* que = new LLqueue();
 
    que->buildQueue(input,output);
-
-   que->insertQ(new listNode(1));
-   que->insertQ(new listNode(2));
-   que->insertQ(new listNode(3));
-   que->insertQ(new listNode(4));
-   que->insertQ(new listNode(5));
-
-   while(!que->isEmpty()){
-       cout<< que->deleteQ()->val <<endl;
-   }
+   input.close();
+   output.close();
 
 
+   input.open(argv[1]);
+   output.open(argv[4]);
 
-    
-
+   LList* list = new LList();
+   list->buildList(input,output);
+   input.close();
+   output.close();
 }
