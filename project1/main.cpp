@@ -9,20 +9,21 @@ class listNode{
     public:
     int val;
     listNode* next;
-    listNode(){
-
-    }
+    //empty constructor
+    listNode(){}
+    //if a node object is created, set the nodes value to data and have its next node point to null
     listNode(int data){
         val = data;
         next = NULL;
     }
 
+    //prints node
     void printNode(listNode* node, ofstream &output){
         //(node's data, data of node's next) ->
         if(node->next == NULL){
-            output << "(" << node->val << ", NULL) -->";
+            output << "(" << node->val << ", NULL)-->";
         }else{
-            output << "(" << node->val << ","<< node->next->val << ") -->";
+            output << "(" << node->val << ","<< node->next->val << ")-->";
         }
         
     }
@@ -34,19 +35,37 @@ class LLstack{
     public:
 
     listNode* top;
-    
+
+    // creates a new stack with a dummy node, set the data in
+    //the dummy node to -9999 and set next to null; and let top points to the dummy node
     LLstack(){
         top = new listNode(-9999);
         top->next = NULL;
         size = 0;
     }
 
-    bool isEmpty(){
-        if(size==0){
-            return true;
+    //creates a stack by reading inputs from the input file
+    void buildStack(ifstream &inFile, ofstream &outFile){
+        LLstack* stk = new LLstack();
+        listNode* junk = NULL;
+        string operation;
+        int num;
+        
+        //while not at end of file (eof) real file input line by line
+        while(!inFile.eof()){
+            
+            inFile >> operation >> num;
+            if(operation == "+" || operation != "-" ){ //operation != "-" is used to combat the initial white space ifstream reads
+                stk->push(new listNode(num));
+                outFile << "Pushed: " << num << endl;
+            }else if(operation == "-") {
+                junk = stk->pop();
+                outFile << "Popped: " << junk->val << endl;
+            }
+            
+            printStack(outFile,stk);
+            
         }
-
-        return false;
     }
     // puts newNode at the top of Stack, after the dummy node.
     void push(listNode* node){
@@ -55,7 +74,6 @@ class LLstack{
         size++;
     }
     // if stack is empty returns null, otherwise deletes and returns the top node of Stack.
-    //make return type listNode*
     listNode* pop(){
         //if stack is empty
         listNode* temp = new listNode(-9999);
@@ -69,8 +87,16 @@ class LLstack{
 
         return temp;
     }
-    
-    //need to finish
+    //checks if stack is empty
+    bool isEmpty(){
+        if(size==0){
+            return true;
+        }
+
+        return false;
+    }
+
+    //prints the stack
     void printStack(ofstream &outputFile, LLstack* stk){
         listNode* temp = stk->top;
         outputFile << "Top -->";
@@ -78,35 +104,9 @@ class LLstack{
             temp->printNode(temp,outputFile);
             temp = temp->next;
         }
-        outputFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
+        outputFile << "(" << temp->val << ",NULL)-->NULL"<< endl;
         
          
-    }
-
-    void buildStack(ifstream &inFile, ofstream &outFile){
-        LLstack* stk = new LLstack();
-        listNode* junk = NULL;
-        string operation;
-        int num;
-        
-        //while not at end of file (eof) real file input line by line
-        while(!inFile.eof()){
-            
-            inFile >> operation >> num;
-            if(operation == "+" || operation != "-" ){ //operation != "-" is used to combat the initial white space ifstream reads
-                stk->push(new listNode(num));
-                outFile << "Added " << num << endl;
-            }else if(operation == "-") {
-                junk = stk->pop();
-                outFile << "Removed " << junk->val << endl;
-            }
-            
-            printStack(outFile,stk);
-            
-        }
-
-
-       
     }
 };
 //-------------------------- LLQueue ---------------------------//
@@ -138,10 +138,10 @@ class LLqueue{
             inFile >> operation >> num;
             if(operation =="+" || operation !="-"){
                 que->insertQ(new listNode(num));
-                outFile<<"Added " << num << endl;
+                outFile<<"Added: " << num << endl;
             }else if(operation == "-"){
                 junk = que->deleteQ();
-                outFile <<"Deleted " << junk->val << endl;
+                outFile <<"Deleted: " << junk->val << endl;
             }
 
             printQ(outFile,que);
@@ -197,7 +197,7 @@ class LLqueue{
             temp = temp->next;
         }
 
-       outFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
+       outFile << "(" << temp->val << ",NULL)-->NULL"<< endl;
     }
 
 };
@@ -228,13 +228,13 @@ class LList{
             inFile >> operation >> num;
             if(operation =="+" || operation !="-"){
                 list->listInsert(new listNode(num));
-                outFile<<"Added " << num << endl;
+                outFile<<"Added: " << num << endl;
             }else if(operation == "-"){
                 junk = list->deleteOneNode(num);
                 if(junk == NULL){
                     outFile <<"Sorry, " <<num<<" is not in the list (Cannot Remove)" << endl;
                 }else{
-                    outFile <<"Deleted " << junk->val << endl;
+                    outFile <<"Deleted: " << junk->val << endl;
                 }
                 
             }
@@ -300,7 +300,7 @@ class LList{
             temp = temp->next;
         }
 
-       outFile << "(" << temp->val << ", NULL) --> NULL"<< endl;
+       outFile << "(" << temp->val << ",NULL)-->NULL"<< endl;
     }
 
     bool isEmpty(){
