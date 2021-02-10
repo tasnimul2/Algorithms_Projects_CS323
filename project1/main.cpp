@@ -18,12 +18,12 @@ class listNode{
     }
 
     //prints node
-    void printNode(listNode* node, ofstream &output){
+    void printNode(ofstream &output){
         //(node's data, data of node's next) ->
-        if(node->next == NULL){
-            output << "(" << node->val << ", NULL)-->";
+        if(next == NULL){
+            output << "(" << val << ", NULL)-->";
         }else{
-            output << "(" << node->val << ","<< node->next->val << ")-->";
+            output << "(" << val << ","<< next->val << ")-->";
         }
         
     }
@@ -101,7 +101,8 @@ class LLstack{
         listNode* temp = stk->top;
         outputFile << "Top -->";
         while(temp->next != NULL){
-            temp->printNode(temp,outputFile);
+            //temp->printNode(temp,outputFile);
+            temp->printNode(outputFile);
             temp = temp->next;
         }
         outputFile << "(" << temp->val << ",NULL)-->NULL"<< endl;
@@ -192,8 +193,9 @@ class LLqueue{
         listNode* temp = que->head;
         outFile << "Top -->";
         while(temp->next != NULL){
-            //outputFile << temp->printNode(temp,outputFile);
-            temp->printNode(temp,outFile);
+            
+            //temp->printNode(temp,outFile);
+            temp->printNode(outFile);
             temp = temp->next;
         }
 
@@ -295,8 +297,8 @@ class LList{
         listNode* temp = list->listHead;
         outFile << "listHead -->";
         while(temp->next != NULL){
-            //outputFile << temp->printNode(temp,outputFile);
-            temp->printNode(temp,outFile);
+            //temp->printNode(temp,outFile);
+            temp->printNode(outFile);
             temp = temp->next;
         }
 
