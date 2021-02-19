@@ -1,3 +1,6 @@
+//Mohammed Chowdhury
+//CS 323-33
+
 #include <iostream>
 #include<fstream>
 
@@ -105,9 +108,7 @@ class LLstack{
             temp->printNode(outputFile);
             temp = temp->next;
         }
-        outputFile << "(" << temp->val << ",NULL)-->NULL"<< endl;
-        
-         
+        outputFile << "(" << temp->val << ",NULL)-->NULL"<< endl;       
     }
 };
 //-------------------------- LLQueue ---------------------------//
@@ -237,12 +238,9 @@ class LList{
                     outFile <<"Sorry, " <<num<<" is not in the list (Cannot Remove)" << endl;
                 }else{
                     outFile <<"Deleted: " << junk->val << endl;
-                }
-                
+                }          
             }
-
             printList(outFile,list);
-
         }
     }
     //algorithm used from class notes
