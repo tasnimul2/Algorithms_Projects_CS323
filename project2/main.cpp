@@ -23,7 +23,55 @@ class listNode{
 };
 
 class hashTable{
+    char op;
+    int bucketSize = 0; //argv[2]
+    listNode* hashTable[];
 
+    //The method dynamically allocates hashTable [], size of bucketSize,
+    //where each entry point to a dummy node: (“dummyfirst”, “dummylast”, null)
+    // On your own! You should know how to do this.
+    void createHashTable(){
+
+    }
+
+    // Given the lastName, the method returns the ‘index’ between 0 to bucketSize-1
+    // The function can be found in the lecture note.
+    int doIt(string lastName){
+
+
+    }
+
+    // see algorithm below.
+    void informationProcessing(ifstream inFile,ofstream outFile){
+
+    } 
+
+    // search thru hashTable[index] linked list to locate the
+    //record with firstName and lastName. See algorithm below.
+    listNode* findSpot(int index, string firstName, string lastName){
+
+    }
+
+    //see algorithm
+    void hashInsert(){
+
+    }
+    // see algorithm 
+    void hashDelete(){
+
+    }
+
+    //see alogrithm
+    void hashRetrieval(){
+
+    }
+    // print the linked list of hashTable [index], use the format given in the above.
+    void printList (int index, ofstream outFile){
+
+    }
+    // output the entire hashTable, call printList (...), index from 0 to bucketSize -1.
+    void printHashTable (ofstream outFile){
+    }
 };
 
 int main(int argc, char* argv[]){
