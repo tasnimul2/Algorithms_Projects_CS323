@@ -74,7 +74,8 @@ class hashTable{
         char op;
         string firstName,lastName;
         int index;
-        //ifream add three black characters at the start of the document, this helps fix it. 
+        //ifream add three blank characters at the start of the document on Linux bases OS like mac and ubuntu, 
+        //this helps fix it. 
         inFile>>openingBlankSpot >> openingBlankSpot >>openingBlankSpot;
         while(!inFile.eof()){
             inFile >> op >> firstName >> lastName;
