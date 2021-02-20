@@ -78,7 +78,6 @@ class hashTable{
         inFile>>openingBlankSpot >> openingBlankSpot >>openingBlankSpot;
         while(!inFile.eof()){
             inFile >> op >> firstName >> lastName;
-            //cout << op << " "<< firstName << " " <<lastName <<endl;
             outFile2 << op << " " << firstName << " " <<lastName <<" is being processed" << endl;
             index = doIt(lastName);
             outFile2 << firstName << " " <<lastName <<" is processing in Hash Table " << index << endl;
