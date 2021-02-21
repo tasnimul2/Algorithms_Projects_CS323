@@ -68,15 +68,15 @@ class hashTable{
         return hash_value % bucketSize;
     }
 
-    // see algorithm below. FINISH LAST
+    // processes user input information and puts it inside the hash Table
     void informationProcessing(ifstream &inFile,ofstream &outFile2){
         char openingBlankSpot;
         char op;
         string firstName,lastName;
         int index;
-        //ifream add three blank characters at the start of the document on Linux bases OS like mac and ubuntu, 
+        //ifstream add three blank characters at the start of the document on Linux baseD OS (mac and ubuntu), 
         //this helps fix it. 
-        inFile>>openingBlankSpot >> openingBlankSpot >>openingBlankSpot;
+        inFile>>openingBlankSpot >> openingBlankSpot >>openingBlankSpot;//IF YOU'RE USING WINDOWS, PLEASE COMMENT OUT THIS LINE OF CODE
         while(!inFile.eof()){
             inFile >> op >> firstName >> lastName;
             outFile2 << op << " " << firstName << " " <<lastName <<" is being processed" << endl;
@@ -199,9 +199,6 @@ int main(int argc, char* argv[]){
    table->informationProcessing(input,output2);
    table->printHashTable(output1);
    
-   
-
-
     input.close();
     output1.close();
     output2.close();

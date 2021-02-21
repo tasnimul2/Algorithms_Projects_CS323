@@ -1,548 +1,548 @@
 + Isakhar Malla is being processed
-Isakhar Malla is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast NULL)-->NULL
+Isakhar Malla is processing in Hash Table 12
+HashTable[12]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Isakhar Malla
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
 + Hermun Kim is being processed
-Hermun Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast NULL)-->NULL
+Hermun Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Hermun Kim
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
 + Carlos Ochilov is being processed
-Carlos Ochilov is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast NULL)-->NULL
+Carlos Ochilov is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Carlos Ochilov
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
 ? Isakhar Malla is being processed
-Isakhar Malla is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
+Isakhar Malla is processing in Hash Table 12
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
 *** Performing hashRetrieval on Isakhar Malla
 Yes, the record is in the database!
 + Michael Zheng is being processed
-Michael Zheng is processing in Hash Table 25
-HashTable[25]: (dummyFirst dummyLast NULL)-->NULL
+Michael Zheng is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Michael Zheng
-HashTable[25]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
+HashTable[38]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
 + Jasmine Malla is being processed
-Jasmine Malla is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
+Jasmine Malla is processing in Hash Table 12
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
 ***Performing hash insert on Jasmine Malla
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
 + Elyon Aminov is being processed
-Elyon Aminov is processing in Hash Table 20
-HashTable[20]: (dummyFirst dummyLast NULL)-->NULL
+Elyon Aminov is processing in Hash Table 39
+HashTable[39]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Elyon Aminov
-HashTable[20]: (dummyFirst dummyLast Elyon)-->(Elyon Aminov NULL)-->NULL
+HashTable[39]: (dummyFirst dummyLast Elyon)-->(Elyon Aminov NULL)-->NULL
 + Hermun Kim is being processed
-Hermun Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
+Hermun Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
 ***Performing hash insert on Hermun Kim
 Warning, the record is already in the database!
 + Jasmin Atwal is being processed
-Jasmin Atwal is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast NULL)-->NULL
+Jasmin Atwal is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Jasmin Atwal
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 ? Sweyaksha Webster is being processed
-Sweyaksha Webster is processing in Hash Table 26
-HashTable[26]: (dummyFirst dummyLast NULL)-->NULL
+Sweyaksha Webster is processing in Hash Table 40
+HashTable[40]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing hashRetrieval on Sweyaksha Webster
 No, the record is not in the database!
 + Mohammed Aucacama is being processed
-Mohammed Aucacama is processing in Hash Table 19
-HashTable[19]: (dummyFirst dummyLast NULL)-->NULL
+Mohammed Aucacama is processing in Hash Table 4
+HashTable[4]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Mohammed Aucacama
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama NULL)-->NULL
+HashTable[4]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama NULL)-->NULL
 + Longcheng Ochilov is being processed
-Longcheng Ochilov is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
+Longcheng Ochilov is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
 ***Performing hash insert on Longcheng Ochilov
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov Longcheng)-->(Longcheng Ochilov NULL)-->NULL
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov Longcheng)-->(Longcheng Ochilov NULL)-->NULL
 + Sweyaksha Webster is being processed
-Sweyaksha Webster is processing in Hash Table 26
-HashTable[26]: (dummyFirst dummyLast NULL)-->NULL
+Sweyaksha Webster is processing in Hash Table 40
+HashTable[40]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Sweyaksha Webster
-HashTable[26]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
+HashTable[40]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 + Kyle Boodoosingh is being processed
-Kyle Boodoosingh is processing in Hash Table 6
-HashTable[6]: (dummyFirst dummyLast NULL)-->NULL
+Kyle Boodoosingh is processing in Hash Table 36
+HashTable[36]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Kyle Boodoosingh
-HashTable[6]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh NULL)-->NULL
+HashTable[36]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh NULL)-->NULL
 - Longcheng Ochilov is being processed
-Longcheng Ochilov is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov Longcheng)-->(Longcheng Ochilov NULL)-->NULL
+Longcheng Ochilov is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov Longcheng)-->(Longcheng Ochilov NULL)-->NULL
 *** Performing delete on Longcheng Ochilov
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
 + Pengdwende Cesa is being processed
-Pengdwende Cesa is processing in Hash Table 22
-HashTable[22]: (dummyFirst dummyLast NULL)-->NULL
+Pengdwende Cesa is processing in Hash Table 28
+HashTable[28]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Pengdwende Cesa
-HashTable[22]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa NULL)-->NULL
+HashTable[28]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa NULL)-->NULL
 ? David Chowdhury is being processed
-David Chowdhury is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+David Chowdhury is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing hashRetrieval on David Chowdhury
 No, the record is not in the database!
 + Kushal Zheng is being processed
-Kushal Zheng is processing in Hash Table 25
-HashTable[25]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
+Kushal Zheng is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
 ***Performing hash insert on Kushal Zheng
-HashTable[25]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
+HashTable[38]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
 + Mohammed Aucacama is being processed
-Mohammed Aucacama is processing in Hash Table 19
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama NULL)-->NULL
+Mohammed Aucacama is processing in Hash Table 4
+HashTable[4]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama NULL)-->NULL
 ***Performing hash insert on Mohammed Aucacama
 Warning, the record is already in the database!
 - Sweyaksha Kim is being processed
-Sweyaksha Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
+Sweyaksha Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
 *** Performing delete on Sweyaksha Kim
 ***Warning ,the record is *not* in the database!+ David Chowdhury is being processed
-David Chowdhury is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+David Chowdhury is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on David Chowdhury
-HashTable[23]: (dummyFirst dummyLast David)-->(David Chowdhury Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+HashTable[22]: (dummyFirst dummyLast David)-->(David Chowdhury NULL)-->NULL
 + Chewantha Chowdhury is being processed
-Chewantha Chowdhury is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast David)-->(David Chowdhury Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+Chewantha Chowdhury is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast David)-->(David Chowdhury NULL)-->NULL
 ***Performing hash insert on Chewantha Chowdhury
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury NULL)-->NULL
 ? Kushal Zheng is being processed
-Kushal Zheng is processing in Hash Table 25
-HashTable[25]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
+Kushal Zheng is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
 *** Performing hashRetrieval on Kushal Zheng
 Yes, the record is in the database!
 + David Chowdhury is being processed
-David Chowdhury is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+David Chowdhury is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury NULL)-->NULL
 ***Performing hash insert on David Chowdhury
 Warning, the record is already in the database!
 - Jasmine Malla is being processed
-Jasmine Malla is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
+Jasmine Malla is processing in Hash Table 12
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla Jasmine)-->(Jasmine Malla NULL)-->NULL
 *** Performing delete on Jasmine Malla
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla NULL)-->NULL
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
 + Dylan Coleman is being processed
-Dylan Coleman is processing in Hash Table 3
-HashTable[3]: (dummyFirst dummyLast NULL)-->NULL
+Dylan Coleman is processing in Hash Table 35
+HashTable[35]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Dylan Coleman
-HashTable[3]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman NULL)-->NULL
+HashTable[35]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman NULL)-->NULL
 + Upesh Guira is being processed
-Upesh Guira is processing in Hash Table 10
-HashTable[10]: (dummyFirst dummyLast NULL)-->NULL
+Upesh Guira is processing in Hash Table 13
+HashTable[13]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Upesh Guira
-HashTable[10]: (dummyFirst dummyLast Upesh)-->(Upesh Guira NULL)-->NULL
+HashTable[13]: (dummyFirst dummyLast Upesh)-->(Upesh Guira NULL)-->NULL
 - Kushal Zheng is being processed
-Kushal Zheng is processing in Hash Table 25
-HashTable[25]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
+Kushal Zheng is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast Kushal)-->(Kushal Zheng Michael)-->(Michael Zheng NULL)-->NULL
 *** Performing delete on Kushal Zheng
-HashTable[25]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
+HashTable[38]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
 + Tasif Jang is being processed
-Tasif Jang is processing in Hash Table 21
-HashTable[21]: (dummyFirst dummyLast NULL)-->NULL
+Tasif Jang is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Tasif Jang
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Tasif)-->(Tasif Jang NULL)-->NULL
 + Miroo Jayasundera is being processed
-Miroo Jayasundera is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast NULL)-->NULL
+Miroo Jayasundera is processing in Hash Table 28
+HashTable[28]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa NULL)-->NULL
 ***Performing hash insert on Miroo Jayasundera
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera NULL)-->NULL
+HashTable[28]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa Miroo)-->(Miroo Jayasundera NULL)-->NULL
 - Jasmine Malla is being processed
-Jasmine Malla is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla NULL)-->NULL
+Jasmine Malla is processing in Hash Table 12
+HashTable[12]: (dummyFirst dummyLast Isakhar)-->(Isakhar Malla NULL)-->NULL
 *** Performing delete on Jasmine Malla
 ***Warning ,the record is *not* in the database!+ Wen Johnson is being processed
-Wen Johnson is processing in Hash Table 17
-HashTable[17]: (dummyFirst dummyLast NULL)-->NULL
+Wen Johnson is processing in Hash Table 10
+HashTable[10]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Wen Johnson
-HashTable[17]: (dummyFirst dummyLast Wen)-->(Wen Johnson NULL)-->NULL
+HashTable[10]: (dummyFirst dummyLast Wen)-->(Wen Johnson NULL)-->NULL
 + Marvin Karki is being processed
-Marvin Karki is processing in Hash Table 7
-HashTable[7]: (dummyFirst dummyLast NULL)-->NULL
+Marvin Karki is processing in Hash Table 27
+HashTable[27]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Marvin Karki
-HashTable[7]: (dummyFirst dummyLast Marvin)-->(Marvin Karki NULL)-->NULL
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki NULL)-->NULL
 - Sweyaksha Kim is being processed
-Sweyaksha Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
+Sweyaksha Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
 *** Performing delete on Sweyaksha Kim
 ***Warning ,the record is *not* in the database!+ Junjie Kazi is being processed
-Junjie Kazi is processing in Hash Table 28
-HashTable[28]: (dummyFirst dummyLast NULL)-->NULL
+Junjie Kazi is processing in Hash Table 7
+HashTable[7]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Junjie Kazi
-HashTable[28]: (dummyFirst dummyLast Junjie)-->(Junjie Kazi NULL)-->NULL
+HashTable[7]: (dummyFirst dummyLast Junjie)-->(Junjie Kazi NULL)-->NULL
 + Richard Kim is being processed
-Richard Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
+Richard Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim NULL)-->NULL
 ***Performing hash insert on Richard Kim
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
 - Davron Cai is being processed
-Davron Cai is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast NULL)-->NULL
+Davron Cai is processing in Hash Table 9
+HashTable[9]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing delete on Davron Cai
 ***Warning ,the record is *not* in the database!+ Brian Lee is being processed
-Brian Lee is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast NULL)-->NULL
+Brian Lee is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
 ***Performing hash insert on Brian Lee
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee NULL)-->NULL
+HashTable[18]: (dummyFirst dummyLast Brian)-->(Brian Lee Carlos)-->(Carlos Ochilov NULL)-->NULL
 + Samriddha Kim is being processed
-Samriddha Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
+Samriddha Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
 ***Performing hash insert on Samriddha Kim
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Samriddha)-->(Samriddha Kim NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Samriddha)-->(Samriddha Kim NULL)-->NULL
 + Fidiana Lei is being processed
-Fidiana Lei is processing in Hash Table 17
-HashTable[17]: (dummyFirst dummyLast Wen)-->(Wen Johnson NULL)-->NULL
+Fidiana Lei is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury NULL)-->NULL
 ***Performing hash insert on Fidiana Lei
-HashTable[17]: (dummyFirst dummyLast Wen)-->(Wen Johnson Fidiana)-->(Fidiana Lei NULL)-->NULL
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Fidiana)-->(Fidiana Lei NULL)-->NULL
 + Josephine Li is being processed
-Josephine Li is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Isakhar)-->(Isakhar Malla NULL)-->NULL
+Josephine Li is processing in Hash Table 35
+HashTable[35]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman NULL)-->NULL
 ***Performing hash insert on Josephine Li
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Josephine)-->(Josephine Li Isakhar)-->(Isakhar Malla NULL)-->NULL
+HashTable[35]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman Josephine)-->(Josephine Li NULL)-->NULL
 - Zilong Kharel is being processed
-Zilong Kharel is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera NULL)-->NULL
+Zilong Kharel is processing in Hash Table 41
+HashTable[41]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing delete on Zilong Kharel
 ***Warning ,the record is *not* in the database!+ Donghee Shrestha is being processed
-Donghee Shrestha is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee NULL)-->NULL
+Donghee Shrestha is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 ***Performing hash insert on Donghee Shrestha
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee Donghee)-->(Donghee Shrestha NULL)-->NULL
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Donghee)-->(Donghee Shrestha NULL)-->NULL
 + Andy Lin is being processed
-Andy Lin is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast Carlos)-->(Carlos Ochilov NULL)-->NULL
+Andy Lin is processing in Hash Table 26
+HashTable[26]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Andy Lin
-HashTable[5]: (dummyFirst dummyLast Andy)-->(Andy Lin Carlos)-->(Carlos Ochilov NULL)-->NULL
+HashTable[26]: (dummyFirst dummyLast Andy)-->(Andy Lin NULL)-->NULL
 + Avenash Luu is being processed
-Avenash Luu is processing in Hash Table 19
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama NULL)-->NULL
+Avenash Luu is processing in Hash Table 30
+HashTable[30]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Avenash Luu
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama Avenash)-->(Avenash Luu NULL)-->NULL
+HashTable[30]: (dummyFirst dummyLast Avenash)-->(Avenash Luu NULL)-->NULL
 ? Brian Lee is being processed
-Brian Lee is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee Donghee)-->(Donghee Shrestha NULL)-->NULL
+Brian Lee is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast Brian)-->(Brian Lee Carlos)-->(Carlos Ochilov NULL)-->NULL
 *** Performing hashRetrieval on Brian Lee
 Yes, the record is in the database!
 + Davron Cai is being processed
-Davron Cai is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast NULL)-->NULL
+Davron Cai is processing in Hash Table 9
+HashTable[9]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Davron Cai
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
+HashTable[9]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
 + Chelsea Mujaj is being processed
-Chelsea Mujaj is processing in Hash Table 28
-HashTable[28]: (dummyFirst dummyLast Junjie)-->(Junjie Kazi NULL)-->NULL
+Chelsea Mujaj is processing in Hash Table 26
+HashTable[26]: (dummyFirst dummyLast Andy)-->(Andy Lin NULL)-->NULL
 ***Performing hash insert on Chelsea Mujaj
-HashTable[28]: (dummyFirst dummyLast Junjie)-->(Junjie Kazi Chelsea)-->(Chelsea Mujaj NULL)-->NULL
+HashTable[26]: (dummyFirst dummyLast Andy)-->(Andy Lin Chelsea)-->(Chelsea Mujaj NULL)-->NULL
 + Gursharn Pho is being processed
-Gursharn Pho is processing in Hash Table 10
-HashTable[10]: (dummyFirst dummyLast Upesh)-->(Upesh Guira NULL)-->NULL
+Gursharn Pho is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Tasif)-->(Tasif Jang NULL)-->NULL
 ***Performing hash insert on Gursharn Pho
-HashTable[10]: (dummyFirst dummyLast Upesh)-->(Upesh Guira Gursharn)-->(Gursharn Pho NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 - Samriddha Kim is being processed
-Samriddha Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Samriddha)-->(Samriddha Kim NULL)-->NULL
+Samriddha Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Samriddha)-->(Samriddha Kim NULL)-->NULL
 *** Performing delete on Samriddha Kim
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
 - Donghee Shrestha is being processed
-Donghee Shrestha is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee Donghee)-->(Donghee Shrestha NULL)-->NULL
+Donghee Shrestha is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Donghee)-->(Donghee Shrestha NULL)-->NULL
 *** Performing delete on Donghee Shrestha
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee NULL)-->NULL
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 + Mahima Qu is being processed
-Mahima Qu is processing in Hash Table 21
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang NULL)-->NULL
+Mahima Qu is processing in Hash Table 35
+HashTable[35]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman Josephine)-->(Josephine Li NULL)-->NULL
 ***Performing hash insert on Mahima Qu
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Mahima)-->(Mahima Qu NULL)-->NULL
+HashTable[35]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman Josephine)-->(Josephine Li Mahima)-->(Mahima Qu NULL)-->NULL
 + Zilong Kharel is being processed
-Zilong Kharel is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera NULL)-->NULL
+Zilong Kharel is processing in Hash Table 41
+HashTable[41]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Zilong Kharel
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel NULL)-->NULL
+HashTable[41]: (dummyFirst dummyLast Zilong)-->(Zilong Kharel NULL)-->NULL
 + Pravesh Ramnarine is being processed
-Pravesh Ramnarine is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel NULL)-->NULL
+Pravesh Ramnarine is processing in Hash Table 20
+HashTable[20]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Pravesh Ramnarine
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
+HashTable[20]: (dummyFirst dummyLast Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
 + Tenzin Rodriguez is being processed
-Tenzin Rodriguez is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
+Tenzin Rodriguez is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
 ***Performing hash insert on Tenzin Rodriguez
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
 + George Singh is being processed
-George Singh is processing in Hash Table 10
-HashTable[10]: (dummyFirst dummyLast Upesh)-->(Upesh Guira Gursharn)-->(Gursharn Pho NULL)-->NULL
+George Singh is processing in Hash Table 28
+HashTable[28]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa Miroo)-->(Miroo Jayasundera NULL)-->NULL
 ***Performing hash insert on George Singh
-HashTable[10]: (dummyFirst dummyLast Upesh)-->(Upesh Guira Gursharn)-->(Gursharn Pho George)-->(George Singh NULL)-->NULL
+HashTable[28]: (dummyFirst dummyLast Pengdwende)-->(Pengdwende Cesa Miroo)-->(Miroo Jayasundera George)-->(George Singh NULL)-->NULL
 + Bingming Thakur is being processed
-Bingming Thakur is processing in Hash Table 1
-HashTable[1]: (dummyFirst dummyLast NULL)-->NULL
+Bingming Thakur is processing in Hash Table 41
+HashTable[41]: (dummyFirst dummyLast Zilong)-->(Zilong Kharel NULL)-->NULL
 ***Performing hash insert on Bingming Thakur
-HashTable[1]: (dummyFirst dummyLast Bingming)-->(Bingming Thakur NULL)-->NULL
+HashTable[41]: (dummyFirst dummyLast Zilong)-->(Zilong Kharel Bingming)-->(Bingming Thakur NULL)-->NULL
 + LinBo Tilija is being processed
-LinBo Tilija is processing in Hash Table 21
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Mahima)-->(Mahima Qu NULL)-->NULL
+LinBo Tilija is processing in Hash Table 32
+HashTable[32]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on LinBo Tilija
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Mahima)-->(Mahima Qu LinBo)-->(LinBo Tilija NULL)-->NULL
+HashTable[32]: (dummyFirst dummyLast LinBo)-->(LinBo Tilija NULL)-->NULL
 ? Davron Cai is being processed
-Davron Cai is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
+Davron Cai is processing in Hash Table 9
+HashTable[9]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
 *** Performing hashRetrieval on Davron Cai
 Yes, the record is in the database!
 + Seratul Diaz is being processed
-Seratul Diaz is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
+Seratul Diaz is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 ***Performing hash insert on Seratul Diaz
-HashTable[27]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 + Roberto Ehsan is being processed
-Roberto Ehsan is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Brian)-->(Brian Lee NULL)-->NULL
+Roberto Ehsan is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Fidiana)-->(Fidiana Lei NULL)-->NULL
 ***Performing hash insert on Roberto Ehsan
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee NULL)-->NULL
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Roberto)-->(Roberto Ehsan Fidiana)-->(Fidiana Lei NULL)-->NULL
 + Derek Khanal is being processed
-Derek Khanal is processing in Hash Table 8
-HashTable[8]: (dummyFirst dummyLast NULL)-->NULL
+Derek Khanal is processing in Hash Table 31
+HashTable[31]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Derek Khanal
-HashTable[8]: (dummyFirst dummyLast Derek)-->(Derek Khanal NULL)-->NULL
+HashTable[31]: (dummyFirst dummyLast Derek)-->(Derek Khanal NULL)-->NULL
 + Bijaya Sajjad is being processed
-Bijaya Sajjad is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
+Bijaya Sajjad is processing in Hash Table 13
+HashTable[13]: (dummyFirst dummyLast Upesh)-->(Upesh Guira NULL)-->NULL
 ***Performing hash insert on Bijaya Sajjad
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad NULL)-->NULL
+HashTable[13]: (dummyFirst dummyLast Upesh)-->(Upesh Guira Bijaya)-->(Bijaya Sajjad NULL)-->NULL
 ? Roberto Ehsan is being processed
-Roberto Ehsan is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee NULL)-->NULL
+Roberto Ehsan is processing in Hash Table 22
+HashTable[22]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Roberto)-->(Roberto Ehsan Fidiana)-->(Fidiana Lei NULL)-->NULL
 *** Performing hashRetrieval on Roberto Ehsan
 Yes, the record is in the database!
 + Jonathan Zhang is being processed
-Jonathan Zhang is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad NULL)-->NULL
+Jonathan Zhang is processing in Hash Table 27
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki NULL)-->NULL
 ***Performing hash insert on Jonathan Zhang
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Jonathan)-->(Jonathan Zhang NULL)-->NULL
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki Jonathan)-->(Jonathan Zhang NULL)-->NULL
 + Ben Gajda is being processed
-Ben Gajda is processing in Hash Table 17
-HashTable[17]: (dummyFirst dummyLast Wen)-->(Wen Johnson Fidiana)-->(Fidiana Lei NULL)-->NULL
+Ben Gajda is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
 ***Performing hash insert on Ben Gajda
-HashTable[17]: (dummyFirst dummyLast Ben)-->(Ben Gajda Wen)-->(Wen Johnson Fidiana)-->(Fidiana Lei NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
 + James Yu is being processed
-James Yu is processing in Hash Table 16
-HashTable[16]: (dummyFirst dummyLast NULL)-->NULL
+James Yu is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez NULL)-->NULL
 ***Performing hash insert on James Yu
-HashTable[16]: (dummyFirst dummyLast James)-->(James Yu NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 + Megan Shrestha is being processed
-Megan Shrestha is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee NULL)-->NULL
+Megan Shrestha is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 ***Performing hash insert on Megan Shrestha
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee Megan)-->(Megan Shrestha NULL)-->NULL
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Megan)-->(Megan Shrestha NULL)-->NULL
 - Alex Devereux is being processed
-Alex Devereux is processing in Hash Table 26
-HashTable[26]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
+Alex Devereux is processing in Hash Table 37
+HashTable[37]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing delete on Alex Devereux
 ***Warning ,the record is *not* in the database!+ Damian Ambia is being processed
-Damian Ambia is processing in Hash Table 1
-HashTable[1]: (dummyFirst dummyLast Bingming)-->(Bingming Thakur NULL)-->NULL
+Damian Ambia is processing in Hash Table 26
+HashTable[26]: (dummyFirst dummyLast Andy)-->(Andy Lin Chelsea)-->(Chelsea Mujaj NULL)-->NULL
 ***Performing hash insert on Damian Ambia
-HashTable[1]: (dummyFirst dummyLast Damian)-->(Damian Ambia Bingming)-->(Bingming Thakur NULL)-->NULL
+HashTable[26]: (dummyFirst dummyLast Damian)-->(Damian Ambia Andy)-->(Andy Lin Chelsea)-->(Chelsea Mujaj NULL)-->NULL
 + Larry Andrade is being processed
-Larry Andrade is processing in Hash Table 14
-HashTable[14]: (dummyFirst dummyLast NULL)-->NULL
+Larry Andrade is processing in Hash Table 41
+HashTable[41]: (dummyFirst dummyLast Zilong)-->(Zilong Kharel Bingming)-->(Bingming Thakur NULL)-->NULL
 ***Performing hash insert on Larry Andrade
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade NULL)-->NULL
+HashTable[41]: (dummyFirst dummyLast Larry)-->(Larry Andrade Zilong)-->(Zilong Kharel Bingming)-->(Bingming Thakur NULL)-->NULL
 + Umair Azarpayvand is being processed
-Umair Azarpayvand is processing in Hash Table 19
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama Avenash)-->(Avenash Luu NULL)-->NULL
+Umair Azarpayvand is processing in Hash Table 17
+HashTable[17]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Umair Azarpayvand
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama Umair)-->(Umair Azarpayvand Avenash)-->(Avenash Luu NULL)-->NULL
+HashTable[17]: (dummyFirst dummyLast Umair)-->(Umair Azarpayvand NULL)-->NULL
 ? Alex Devereux is being processed
-Alex Devereux is processing in Hash Table 26
-HashTable[26]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
+Alex Devereux is processing in Hash Table 37
+HashTable[37]: (dummyFirst dummyLast NULL)-->NULL
 *** Performing hashRetrieval on Alex Devereux
 No, the record is not in the database!
 + Rashad Bernard is being processed
-Rashad Bernard is processing in Hash Table 0
-HashTable[0]: (dummyFirst dummyLast NULL)-->NULL
+Rashad Bernard is processing in Hash Table 19
+HashTable[19]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Rashad Bernard
-HashTable[0]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard NULL)-->NULL
+HashTable[19]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard NULL)-->NULL
 - Heteng Zhang is being processed
-Heteng Zhang is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Jonathan)-->(Jonathan Zhang NULL)-->NULL
+Heteng Zhang is processing in Hash Table 27
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki Jonathan)-->(Jonathan Zhang NULL)-->NULL
 *** Performing delete on Heteng Zhang
 ***Warning ,the record is *not* in the database!+ Robert Bista is being processed
-Robert Bista is processing in Hash Table 15
-HashTable[15]: (dummyFirst dummyLast NULL)-->NULL
+Robert Bista is processing in Hash Table 40
+HashTable[40]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 ***Performing hash insert on Robert Bista
-HashTable[15]: (dummyFirst dummyLast Robert)-->(Robert Bista NULL)-->NULL
+HashTable[40]: (dummyFirst dummyLast Robert)-->(Robert Bista Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 + John Cohen is being processed
-John Cohen is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
+John Cohen is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast Michael)-->(Michael Zheng NULL)-->NULL
 ***Performing hash insert on John Cohen
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen NULL)-->NULL
+HashTable[38]: (dummyFirst dummyLast John)-->(John Cohen Michael)-->(Michael Zheng NULL)-->NULL
 + James Deciutiis is being processed
-James Deciutiis is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Jonathan)-->(Jonathan Zhang NULL)-->NULL
+James Deciutiis is processing in Hash Table 8
+HashTable[8]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on James Deciutiis
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Jonathan)-->(Jonathan Zhang NULL)-->NULL
+HashTable[8]: (dummyFirst dummyLast James)-->(James Deciutiis NULL)-->NULL
 + Thomas Diaz is being processed
-Thomas Diaz is processing in Hash Table 27
-HashTable[27]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
+Thomas Diaz is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 ***Performing hash insert on Thomas Diaz
-HashTable[27]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Miroo)-->(Miroo Jayasundera Zilong)-->(Zilong Kharel Pravesh)-->(Pravesh Ramnarine NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 + Shudip Taha is being processed
-Shudip Taha is processing in Hash Table 6
-HashTable[6]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh NULL)-->NULL
+Shudip Taha is processing in Hash Table 0
+HashTable[0]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Shudip Taha
-HashTable[6]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh Shudip)-->(Shudip Taha NULL)-->NULL
+HashTable[0]: (dummyFirst dummyLast Shudip)-->(Shudip Taha NULL)-->NULL
 + Jino Ellis is being processed
-Jino Ellis is processing in Hash Table 0
-HashTable[0]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard NULL)-->NULL
+Jino Ellis is processing in Hash Table 3
+HashTable[3]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Jino Ellis
-HashTable[0]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard Jino)-->(Jino Ellis NULL)-->NULL
+HashTable[3]: (dummyFirst dummyLast Jino)-->(Jino Ellis NULL)-->NULL
 + Dhawa Farooq is being processed
-Dhawa Farooq is processing in Hash Table 17
-HashTable[17]: (dummyFirst dummyLast Ben)-->(Ben Gajda Wen)-->(Wen Johnson Fidiana)-->(Fidiana Lei NULL)-->NULL
+Dhawa Farooq is processing in Hash Table 13
+HashTable[13]: (dummyFirst dummyLast Upesh)-->(Upesh Guira Bijaya)-->(Bijaya Sajjad NULL)-->NULL
 ***Performing hash insert on Dhawa Farooq
-HashTable[17]: (dummyFirst dummyLast Dhawa)-->(Dhawa Farooq Ben)-->(Ben Gajda Wen)-->(Wen Johnson Fidiana)-->(Fidiana Lei NULL)-->NULL
+HashTable[13]: (dummyFirst dummyLast Dhawa)-->(Dhawa Farooq Upesh)-->(Upesh Guira Bijaya)-->(Bijaya Sajjad NULL)-->NULL
 - Robert Bista is being processed
-Robert Bista is processing in Hash Table 15
-HashTable[15]: (dummyFirst dummyLast Robert)-->(Robert Bista NULL)-->NULL
+Robert Bista is processing in Hash Table 40
+HashTable[40]: (dummyFirst dummyLast Robert)-->(Robert Bista Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 *** Performing delete on Robert Bista
-HashTable[15]: (dummyFirst dummyLast NULL)-->NULL
+HashTable[40]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 + Bertin Farooqi is being processed
-Bertin Farooqi is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen NULL)-->NULL
+Bertin Farooqi is processing in Hash Table 5
+HashTable[5]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Bertin Farooqi
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi NULL)-->NULL
+HashTable[5]: (dummyFirst dummyLast Bertin)-->(Bertin Farooqi NULL)-->NULL
 + Vincenzo Gutierrez is being processed
-Vincenzo Gutierrez is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi NULL)-->NULL
+Vincenzo Gutierrez is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 ***Performing hash insert on Vincenzo Gutierrez
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi Vincenzo)-->(Vincenzo Gutierrez NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Vincenzo)-->(Vincenzo Gutierrez Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 + Heteng Zhang is being processed
-Heteng Zhang is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Jonathan)-->(Jonathan Zhang NULL)-->NULL
+Heteng Zhang is processing in Hash Table 27
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki Jonathan)-->(Jonathan Zhang NULL)-->NULL
 ***Performing hash insert on Heteng Zhang
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+HashTable[27]: (dummyFirst dummyLast Marvin)-->(Marvin Karki Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
 ? Robert Bista is being processed
-Robert Bista is processing in Hash Table 15
-HashTable[15]: (dummyFirst dummyLast NULL)-->NULL
+Robert Bista is processing in Hash Table 40
+HashTable[40]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
 *** Performing hashRetrieval on Robert Bista
 No, the record is not in the database!
 + Alex Devereux is being processed
-Alex Devereux is processing in Hash Table 26
-HashTable[26]: (dummyFirst dummyLast Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
+Alex Devereux is processing in Hash Table 37
+HashTable[37]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Alex Devereux
-HashTable[26]: (dummyFirst dummyLast Alex)-->(Alex Devereux Sweyaksha)-->(Sweyaksha Webster NULL)-->NULL
+HashTable[37]: (dummyFirst dummyLast Alex)-->(Alex Devereux NULL)-->NULL
 + Michael Kim is being processed
-Michael Kim is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Richard)-->(Richard Kim NULL)-->NULL
+Michael Kim is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Vincenzo)-->(Vincenzo Gutierrez Hermun)-->(Hermun Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 ***Performing hash insert on Michael Kim
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Vincenzo)-->(Vincenzo Gutierrez Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 + Ryan Kousountidis is being processed
-Ryan Kousountidis is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi Vincenzo)-->(Vincenzo Gutierrez NULL)-->NULL
+Ryan Kousountidis is processing in Hash Table 38
+HashTable[38]: (dummyFirst dummyLast John)-->(John Cohen Michael)-->(Michael Zheng NULL)-->NULL
 ***Performing hash insert on Ryan Kousountidis
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi Vincenzo)-->(Vincenzo Gutierrez Ryan)-->(Ryan Kousountidis NULL)-->NULL
+HashTable[38]: (dummyFirst dummyLast John)-->(John Cohen Ryan)-->(Ryan Kousountidis Michael)-->(Michael Zheng NULL)-->NULL
 - Shudip Taha is being processed
-Shudip Taha is processing in Hash Table 6
-HashTable[6]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh Shudip)-->(Shudip Taha NULL)-->NULL
+Shudip Taha is processing in Hash Table 0
+HashTable[0]: (dummyFirst dummyLast Shudip)-->(Shudip Taha NULL)-->NULL
 *** Performing delete on Shudip Taha
-HashTable[6]: (dummyFirst dummyLast Kyle)-->(Kyle Boodoosingh NULL)-->NULL
+HashTable[0]: (dummyFirst dummyLast NULL)-->NULL
 + Matin Kwon is being processed
-Matin Kwon is processing in Hash Table 24
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim NULL)-->NULL
+Matin Kwon is processing in Hash Table 0
+HashTable[0]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Matin Kwon
-HashTable[24]: (dummyFirst dummyLast Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim Matin)-->(Matin Kwon NULL)-->NULL
+HashTable[0]: (dummyFirst dummyLast Matin)-->(Matin Kwon NULL)-->NULL
 + Kenley Lama is being processed
-Kenley Lama is processing in Hash Table 8
-HashTable[8]: (dummyFirst dummyLast Derek)-->(Derek Khanal NULL)-->NULL
-***Performing hash insert on Kenley Lama
-HashTable[8]: (dummyFirst dummyLast Derek)-->(Derek Khanal Kenley)-->(Kenley Lama NULL)-->NULL
-+ John Legendre is being processed
-John Legendre is processing in Hash Table 15
+Kenley Lama is processing in Hash Table 15
 HashTable[15]: (dummyFirst dummyLast NULL)-->NULL
+***Performing hash insert on Kenley Lama
+HashTable[15]: (dummyFirst dummyLast Kenley)-->(Kenley Lama NULL)-->NULL
++ John Legendre is being processed
+John Legendre is processing in Hash Table 25
+HashTable[25]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on John Legendre
-HashTable[15]: (dummyFirst dummyLast John)-->(John Legendre NULL)-->NULL
+HashTable[25]: (dummyFirst dummyLast John)-->(John Legendre NULL)-->NULL
 + Afm Syedan is being processed
-Afm Syedan is processing in Hash Table 14
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade NULL)-->NULL
+Afm Syedan is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 ***Performing hash insert on Afm Syedan
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade Afm)-->(Afm Syedan NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho Afm)-->(Afm Syedan NULL)-->NULL
 + Bakhtiyorjon Manno is being processed
-Bakhtiyorjon Manno is processing in Hash Table 3
-HashTable[3]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman NULL)-->NULL
+Bakhtiyorjon Manno is processing in Hash Table 31
+HashTable[31]: (dummyFirst dummyLast Derek)-->(Derek Khanal NULL)-->NULL
 ***Performing hash insert on Bakhtiyorjon Manno
-HashTable[3]: (dummyFirst dummyLast Dylan)-->(Dylan Coleman Bakhtiyorjon)-->(Bakhtiyorjon Manno NULL)-->NULL
+HashTable[31]: (dummyFirst dummyLast Derek)-->(Derek Khanal Bakhtiyorjon)-->(Bakhtiyorjon Manno NULL)-->NULL
 - Megan Shrestha is being processed
-Megan Shrestha is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee Megan)-->(Megan Shrestha NULL)-->NULL
+Megan Shrestha is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal Megan)-->(Megan Shrestha NULL)-->NULL
 *** Performing delete on Megan Shrestha
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee NULL)-->NULL
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 + Franklin Meneses is being processed
-Franklin Meneses is processing in Hash Table 21
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Mahima)-->(Mahima Qu LinBo)-->(LinBo Tilija NULL)-->NULL
+Franklin Meneses is processing in Hash Table 18
+HashTable[18]: (dummyFirst dummyLast Brian)-->(Brian Lee Carlos)-->(Carlos Ochilov NULL)-->NULL
 ***Performing hash insert on Franklin Meneses
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Franklin)-->(Franklin Meneses Mahima)-->(Mahima Qu LinBo)-->(LinBo Tilija NULL)-->NULL
+HashTable[18]: (dummyFirst dummyLast Brian)-->(Brian Lee Franklin)-->(Franklin Meneses Carlos)-->(Carlos Ochilov NULL)-->NULL
 + Muhammad Mohamed is being processed
-Muhammad Mohamed is processing in Hash Table 19
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama Umair)-->(Umair Azarpayvand Avenash)-->(Avenash Luu NULL)-->NULL
+Muhammad Mohamed is processing in Hash Table 15
+HashTable[15]: (dummyFirst dummyLast Kenley)-->(Kenley Lama NULL)-->NULL
 ***Performing hash insert on Muhammad Mohamed
-HashTable[19]: (dummyFirst dummyLast Mohammed)-->(Mohammed Aucacama Umair)-->(Umair Azarpayvand Avenash)-->(Avenash Luu Muhammad)-->(Muhammad Mohamed NULL)-->NULL
+HashTable[15]: (dummyFirst dummyLast Kenley)-->(Kenley Lama Muhammad)-->(Muhammad Mohamed NULL)-->NULL
 - Afm Syedan is being processed
-Afm Syedan is processing in Hash Table 14
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade Afm)-->(Afm Syedan NULL)-->NULL
+Afm Syedan is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho Afm)-->(Afm Syedan NULL)-->NULL
 *** Performing delete on Afm Syedan
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade NULL)-->NULL
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 ? Megan Shrestha is being processed
-Megan Shrestha is processing in Hash Table 13
-HashTable[13]: (dummyFirst dummyLast Roberto)-->(Roberto Ehsan Brian)-->(Brian Lee NULL)-->NULL
+Megan Shrestha is processing in Hash Table 14
+HashTable[14]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal NULL)-->NULL
 *** Performing hashRetrieval on Megan Shrestha
 No, the record is not in the database!
 ? Afm Syedan is being processed
-Afm Syedan is processing in Hash Table 14
-HashTable[14]: (dummyFirst dummyLast Larry)-->(Larry Andrade NULL)-->NULL
+Afm Syedan is processing in Hash Table 6
+HashTable[6]: (dummyFirst dummyLast Seratul)-->(Seratul Diaz Thomas)-->(Thomas Diaz Tasif)-->(Tasif Jang Gursharn)-->(Gursharn Pho NULL)-->NULL
 *** Performing hashRetrieval on Afm Syedan
 No, the record is not in the database!
 + Preety Nazamy is being processed
-Preety Nazamy is processing in Hash Table 23
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Josephine)-->(Josephine Li Isakhar)-->(Isakhar Malla NULL)-->NULL
+Preety Nazamy is processing in Hash Table 0
+HashTable[0]: (dummyFirst dummyLast Matin)-->(Matin Kwon NULL)-->NULL
 ***Performing hash insert on Preety Nazamy
-HashTable[23]: (dummyFirst dummyLast Chewantha)-->(Chewantha Chowdhury David)-->(David Chowdhury Josephine)-->(Josephine Li Isakhar)-->(Isakhar Malla Preety)-->(Preety Nazamy NULL)-->NULL
+HashTable[0]: (dummyFirst dummyLast Matin)-->(Matin Kwon Preety)-->(Preety Nazamy NULL)-->NULL
 + Luis Subick is being processed
-Luis Subick is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast Andy)-->(Andy Lin Carlos)-->(Carlos Ochilov NULL)-->NULL
+Luis Subick is processing in Hash Table 23
+HashTable[23]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Luis Subick
-HashTable[5]: (dummyFirst dummyLast Andy)-->(Andy Lin Carlos)-->(Carlos Ochilov Luis)-->(Luis Subick NULL)-->NULL
+HashTable[23]: (dummyFirst dummyLast Luis)-->(Luis Subick NULL)-->NULL
 + Ryan Nicolas is being processed
-Ryan Nicolas is processing in Hash Table 11
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi Vincenzo)-->(Vincenzo Gutierrez Ryan)-->(Ryan Kousountidis NULL)-->NULL
+Ryan Nicolas is processing in Hash Table 19
+HashTable[19]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard NULL)-->NULL
 ***Performing hash insert on Ryan Nicolas
-HashTable[11]: (dummyFirst dummyLast Davron)-->(Davron Cai John)-->(John Cohen Bertin)-->(Bertin Farooqi Vincenzo)-->(Vincenzo Gutierrez Ryan)-->(Ryan Kousountidis Ryan)-->(Ryan Nicolas NULL)-->NULL
+HashTable[19]: (dummyFirst dummyLast Rashad)-->(Rashad Bernard Ryan)-->(Ryan Nicolas NULL)-->NULL
 - Bijaya Sajjad is being processed
-Bijaya Sajjad is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Bijaya)-->(Bijaya Sajjad Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+Bijaya Sajjad is processing in Hash Table 13
+HashTable[13]: (dummyFirst dummyLast Dhawa)-->(Dhawa Farooq Upesh)-->(Upesh Guira Bijaya)-->(Bijaya Sajjad NULL)-->NULL
 *** Performing delete on Bijaya Sajjad
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+HashTable[13]: (dummyFirst dummyLast Dhawa)-->(Dhawa Farooq Upesh)-->(Upesh Guira NULL)-->NULL
 + Hajab Prykiel is being processed
-Hajab Prykiel is processing in Hash Table 1
-HashTable[1]: (dummyFirst dummyLast Damian)-->(Damian Ambia Bingming)-->(Bingming Thakur NULL)-->NULL
+Hajab Prykiel is processing in Hash Table 9
+HashTable[9]: (dummyFirst dummyLast Davron)-->(Davron Cai NULL)-->NULL
 ***Performing hash insert on Hajab Prykiel
-HashTable[1]: (dummyFirst dummyLast Damian)-->(Damian Ambia Hajab)-->(Hajab Prykiel Bingming)-->(Bingming Thakur NULL)-->NULL
+HashTable[9]: (dummyFirst dummyLast Davron)-->(Davron Cai Hajab)-->(Hajab Prykiel NULL)-->NULL
 + Mohab Rasulov is being processed
-Mohab Rasulov is processing in Hash Table 21
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Franklin)-->(Franklin Meneses Mahima)-->(Mahima Qu LinBo)-->(LinBo Tilija NULL)-->NULL
+Mohab Rasulov is processing in Hash Table 16
+HashTable[16]: (dummyFirst dummyLast NULL)-->NULL
 ***Performing hash insert on Mohab Rasulov
-HashTable[21]: (dummyFirst dummyLast Tasif)-->(Tasif Jang Franklin)-->(Franklin Meneses Mahima)-->(Mahima Qu Mohab)-->(Mohab Rasulov LinBo)-->(LinBo Tilija NULL)-->NULL
+HashTable[16]: (dummyFirst dummyLast Mohab)-->(Mohab Rasulov NULL)-->NULL
 + Wengang Rodriguez is being processed
-Wengang Rodriguez is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+Wengang Rodriguez is processing in Hash Table 33
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Vincenzo)-->(Vincenzo Gutierrez Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez James)-->(James Yu NULL)-->NULL
 ***Performing hash insert on Wengang Rodriguez
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Wengang)-->(Wengang Rodriguez Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+HashTable[33]: (dummyFirst dummyLast Ben)-->(Ben Gajda Vincenzo)-->(Vincenzo Gutierrez Hermun)-->(Hermun Kim Michael)-->(Michael Kim Richard)-->(Richard Kim Tenzin)-->(Tenzin Rodriguez Wengang)-->(Wengang Rodriguez James)-->(James Yu NULL)-->NULL
 - Luis Subick is being processed
-Luis Subick is processing in Hash Table 5
-HashTable[5]: (dummyFirst dummyLast Andy)-->(Andy Lin Carlos)-->(Carlos Ochilov Luis)-->(Luis Subick NULL)-->NULL
+Luis Subick is processing in Hash Table 23
+HashTable[23]: (dummyFirst dummyLast Luis)-->(Luis Subick NULL)-->NULL
 *** Performing delete on Luis Subick
-HashTable[5]: (dummyFirst dummyLast Andy)-->(Andy Lin Carlos)-->(Carlos Ochilov NULL)-->NULL
+HashTable[23]: (dummyFirst dummyLast NULL)-->NULL
 ? Bijaya Sajjad is being processed
-Bijaya Sajjad is processing in Hash Table 18
-HashTable[18]: (dummyFirst dummyLast Jasmin)-->(Jasmin Atwal James)-->(James Deciutiis Tenzin)-->(Tenzin Rodriguez Wengang)-->(Wengang Rodriguez Heteng)-->(Heteng Zhang Jonathan)-->(Jonathan Zhang NULL)-->NULL
+Bijaya Sajjad is processing in Hash Table 13
+HashTable[13]: (dummyFirst dummyLast Dhawa)-->(Dhawa Farooq Upesh)-->(Upesh Guira NULL)-->NULL
 *** Performing hashRetrieval on Bijaya Sajjad
 No, the record is not in the database!
