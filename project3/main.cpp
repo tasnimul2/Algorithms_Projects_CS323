@@ -226,7 +226,52 @@ class RadixSort{
                 hashTable[row][col] = new LLqueue();
             }
         }
+
+    }//end of constructor 
+
+    // Read from input file; determine the largest and smallest integers in the file
+    // and establishes offset.
+    void firstReading (){
     }
+
+    // Constructs a linked list stack from the data in inFile.
+    void loadStack (){
+    }
+
+    // Performs Radix sort; sorts from right-to-left.
+    void RSort (){
+
+    }
+    // Moves all nodes on the stack to the first hash table.
+    void moveStack(){
+
+    }
+    // Determines and returns the length of a given data.
+    //suggestion: convert data to string to get the length.
+    int getLength (int data){
+
+        return 0;   
+    }
+    //Determines and returns the digit at the position of data. On your own!
+    //** suggestion: convert data to string to get the digit then convert digit back to int.
+    //** Reminding: string indexing is from left to right, when converting to string, the digit you want is
+    // at the position of the string counting from right.
+    int getDigit (int data,int position){
+
+        return 0;
+    }
+
+    // Call printQueue () for each none empty queue in hashTable[whichTable].
+    void printTable (int whichTable,ofstream &outFile2){
+
+    }
+    // Print each none empty queue in hashTable[whichTable], one data per text line;
+    //*** make sure to subtract offSet before printing the data.
+    void printSortedData (int whichTable,ofstream &outFile1){
+        
+    }
+
+
     
 
 };
