@@ -158,21 +158,6 @@ class LLqueue{
     //head is always dummy. head's next is 1st one out. tail is last one out.
     // insert the newNode after the tail of Q.
     void insertQ(listNode* node){
-        
-        /*
-        listNode* temp = head;
-        while(head->next != NULL){
-            head = head->next;
-        }
-        head->next = node;
-        node->next = NULL;
-        tail = node;
-        head = temp;
-        size++;
-        cout<<"inserting: DONE!, size: "<<size <<endl;
-        */
-        
-       
        if(isEmpty()){
            head->next = node;
            tail = node;
@@ -183,9 +168,6 @@ class LLqueue{
            tail = node;
            size++;
        }
-       
-       
-       
     }
 
     // if Q is not empty, deletes the first node, after the dummy from Q and returns the
@@ -206,12 +188,7 @@ class LLqueue{
     // checks to see if Q is empty, i.e., tail points to the dummy node. It returns true is Q is
     //empty and false otherwise.
     bool isEmpty(){
-        /*
-        if(head->next == NULL && tail == NULL){
-            return true;
-        }
-        return false;
-        */
+    
        if(size ==0){
            return true;
        }else{
@@ -295,8 +272,6 @@ class RadixSort{
         outFile2 << "negativeNum: " << negativeNum <<endl;
         outFile2 << "offset: " << offset <<endl;
         outFile2 << "numDigits: " << numDigits <<endl;
-
-
     }
 
     // Constructs a linked list stack from the data in inFile.
@@ -358,8 +333,6 @@ class RadixSort{
             listNode* node = stk->pop();
             int hashIndex = getDigit(node->val,currentPosition);
             hashTable[currentTable][hashIndex]->insertQ(node);
-
-           
             
         }
 
@@ -403,7 +376,13 @@ class RadixSort{
     void printSortedData (int whichTable,ofstream &outFile1){
          for(int i =0;i<10;i++){
             if(hashTable[whichTable][i]->head->next != NULL){
-                hashTable[whichTable][i]->printQ(whichTable,i,hashTable[whichTable][i],outFile1);
+                listNode* curr = hashTable[whichTable][i]->head->next;
+                listNode* temp = curr;
+                while(curr != NULL){
+                    outFile1<< (curr->val)- offset <<endl;
+                    curr = curr->next;
+                }
+                curr = temp;
             }
         }
     }
@@ -424,27 +403,10 @@ int main(int argc,char* argv[]){
     if(input.fail()){
         cout<< "error opening input file, make sure the name of file is typed correctly"<<endl;
     }
-    /*
-    int num;
-    char blank;
-    input>>blank>>blank>>blank;
-
-    while(!input.eof()){
-        input >> num;
-        cout << num << endl;
-    }
-    */
+  
     
-
     RadixSort* srt = new RadixSort();
-    /*
-    for(int r = 0; r < 2;r++){
-        for(int c = 0; c<10; c++){
-            cout << srt->hashTable[r][c]->head->val<<" ";
-        }
-        cout<<endl;
-    }
-    */
+   
     srt->firstReading(input,output2);
     input.close();
 
