@@ -1,3 +1,4 @@
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -57,14 +58,39 @@ public class HuffmanCoding {
             System.out.println("exception in printCountAry");
         }
     }
-    //algorithm given
-    public void constructHuffmanLList(){
 
+    //algorithm given
+    public void constructHuffmanLList(FileWriter debugFile){
+        LinkedList list = new LinkedList(); //creates a linked list with a dummy node (“dummy” ,0, , null, null, null)
+        int index = 0;
+        while(index < 256){
+            if(charCountAry[index] > 0){
+                char chr = (char) index;
+                int prob = charCountAry[index];
+                list.insertNewNode(new TreeNode(String.valueOf(chr),prob,"",null,null,null));
+                list.printList(debugFile);
+            }
+            index++;
+        }
     }
 
     //algorithm given
-    public void constructHuffmanBinTree(){
-
+    public void constructHuffmanBinTree(TreeNode head, FileWriter debugFile){
+        TreeNode newNode = new TreeNode("",0,"",null,null,null);
+        TreeNode temp = head;
+        LinkedList list = new LinkedList();;
+        while(head.next.next != null){
+            newNode.setFrequency(head.next.getFrequency() + head.next.next.getFrequency());
+            newNode.setChStr(head.next.getChStr()+ head.next.next.getChStr());
+            newNode.left = head.next;
+            newNode.right = head.next.next;
+            newNode.next = null;
+            list.insertNewNode(newNode);
+            head.next = head.next.next;
+            list.printList(debugFile);
+        }
+        BinaryTree tree = new BinaryTree(list.getListHead().next);
+        head = temp;
     }
 
     // It will NOT output the codes to an out file,

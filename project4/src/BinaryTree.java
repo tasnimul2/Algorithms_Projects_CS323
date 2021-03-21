@@ -8,6 +8,10 @@ public class BinaryTree {
     public BinaryTree(){
         this.root = null;
     }
+
+    public BinaryTree(TreeNode node){
+        this.root = node;
+    }
      // see algorithm below
     public void preOrderTraversal(TreeNode root, FileWriter debugFile){
         if(root == null){

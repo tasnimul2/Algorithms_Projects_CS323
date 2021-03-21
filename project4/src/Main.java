@@ -23,6 +23,7 @@ public class Main {
             HuffmanCoding huffman = new HuffmanCoding();
             huffman.computeCharCounts(inFile);
             huffman.printCountAry(debugFile);
+            huffman.constructHuffmanLList(debugFile);
             debugFile.close();
         }catch (IOException e){
             System.out.println("Exception in main method");

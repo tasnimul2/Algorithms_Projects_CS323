@@ -51,20 +51,20 @@ public class TreeNode {
     public void printNode(TreeNode t, FileWriter debugFile){
         try{
             if(this.left!= null&& this.right!=null ) {//&& this.next!= null && t.next.chStr != null && t.left.chStr != null && t.right.chStr != null
-                debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: " + t.right.chStr +")\n");
+                debugFile.write("("+this.chStr + "," + this.frequency + "," + this.code +
+                        "," + t.next.chStr + "," + t.left.chStr + "," + t.right.chStr +")");
             }else if(this.left!= null&& this.right==null){
-                debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: NULL" +")\n");
+                debugFile.write("("+this.chStr + "," + this.frequency + "," + this.code +
+                        "," + t.next.chStr + "," + t.left.chStr + "," +")");
             }else if(this.left == null && this.right!=null){
-                debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: NULL"  + ",Right chStr: " + t.right.chStr +")\n");
+                debugFile.write("("+this.chStr + "," + this.frequency + "," + this.code +
+                        "," + t.next.chStr + ",NULL"  + "," + t.right.chStr +")");
             }else if(t.next != null){
-                debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + "null" + ",Right chStr: " +"null" +")\n");
+                debugFile.write("("+this.chStr + "," + this.frequency + "," + this.code +
+                        "," + t.next.chStr + "," + "null" + "," +"null" +")");
             }else{
-                debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: NULL,Left chStr:NULL,Right chStr: NULL" + ")\n");
+                debugFile.write("("+this.chStr + "," + this.frequency + "," + this.code +
+                        ",NULL,NULL,NULL" + ")");
             }
 
         }catch (IOException e){

@@ -32,7 +32,7 @@ public class LinkedList {
 
     public LinkedList(){
 
-        TreeNode dummy = new TreeNode("DUMMY",-1,"DUMMY",null,null,null);
+        TreeNode dummy = new TreeNode("DUMMY",0,"",null,null,null);
         listHead = dummy;
         listTail = dummy;
         listTail.next = null;
@@ -61,12 +61,6 @@ public class LinkedList {
                 curr = curr.next;
             }
             curr = temp;
-            /*
-            listTail.next = node;
-            listTail = node;
-            size++;
-
-             */
         }
     }
 
@@ -80,7 +74,7 @@ public class LinkedList {
                 debugFile.write("-->");
                 curr = curr.next;
             }
-            debugFile.write("NULL");
+            debugFile.write("NULL \n");
             curr = temp;
         }catch (IOException e){
             System.out.println("error in printList");
