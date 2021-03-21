@@ -18,7 +18,7 @@ public class Main {
             list.insertNewNode(new TreeNode("3",2,"-1",null,null,null));
             list.insertNewNode(new TreeNode("4",5,"-1",null,null,null));
 
-            list.printList(debugFile);
+            list.printList(list,debugFile);
 
             HuffmanCoding huffman = new HuffmanCoding();
             huffman.computeCharCounts(inFile);
@@ -27,7 +27,7 @@ public class Main {
             BinaryTree tree = huffman.constructHuffmanBinTree(head,debugFile);
             huffman.constructCharCode(tree.root,"");
             debugFile.write("\n PRINTING LINKED LIST \n");
-            head.printList(debugFile);
+            head.printList(head,debugFile);
             debugFile.write("\n PREORDER TREE TRAVERSAL \n");
             tree.preOrderTraversal(tree.root,debugFile);
             debugFile.write("\n POSTORDER TREE TRAVERSAL \n");

@@ -68,7 +68,7 @@ public class HuffmanCoding {
                 char chr = (char) index;
                 int prob = charCountAry[index];
                 list.insertNewNode(new TreeNode(String.valueOf(chr),prob,"",null,null,null));
-                list.printList(debugFile);
+                list.printList(list,debugFile);
             }
             index++;
         }
@@ -93,7 +93,7 @@ public class HuffmanCoding {
                 list.insertNewNode(newNode);
                 tmp = newNode;
                 list.getListHead().next = list.getListHead().next.next.next;
-                list.printList(debugFile);
+                list.printList(list,debugFile);
             }
 
             tree.root = tmp;

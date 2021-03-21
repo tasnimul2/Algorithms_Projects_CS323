@@ -65,9 +65,9 @@ public class LinkedList {
     }
 
     // Call printNode for every node on the list from listHead to the end of the list
-    public void printList(FileWriter debugFile){
-        TreeNode curr = listHead;
-        TreeNode temp = listHead;
+    public void printList(LinkedList list,FileWriter debugFile){
+        TreeNode curr = list.getListHead();
+        TreeNode temp = list.getListHead();
         try {
             debugFile.write("***PRINTING LINKED LIST*** \n");
             while (curr != null) {
