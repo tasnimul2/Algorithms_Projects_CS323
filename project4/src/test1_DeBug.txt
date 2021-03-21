@@ -1,1 +1,34 @@
-(chStr: DUMMY,Frequency: -1,code: DUMMY,next chStr: 3,Left chStr: null,Right chStr: null)-->(chStr: 3,Frequency: 2,code: -1,next chStr: 2,Left chStr: null,Right chStr: null)-->(chStr: 2,Frequency: 3,code: -1,next chStr: 4,Left chStr: null,Right chStr: null)-->(chStr: 4,Frequency: 5,code: -1,next chStr: 1,Left chStr: null,Right chStr: null)-->(chStr: 1,Frequency: 8,code: -1,next chStr: NULL,Left chStr:NULL,Right chStr: NULL)-->NULL
+PRINTING CHARACTER COUNT ARRAY **** >>> 
+char32 114
+char39 1
+char44 10
+char46 5
+char71 1
+char72 1
+char79 2
+char83 5
+char84 1
+char85 1
+char97 49
+char98 10
+char99 6
+char100 17
+char101 51
+char102 15
+char103 16
+char104 35
+char105 46
+char107 6
+char108 18
+char109 8
+char110 39
+char111 28
+char112 7
+char114 24
+char115 40
+char116 48
+char117 10
+char118 2
+char119 3
+char120 1
+char121 11

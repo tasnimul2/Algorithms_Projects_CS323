@@ -52,19 +52,19 @@ public class TreeNode {
         try{
             if(this.left!= null&& this.right!=null ) {//&& this.next!= null && t.next.chStr != null && t.left.chStr != null && t.right.chStr != null
                 debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: " + t.right.chStr +")");
+                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: " + t.right.chStr +")\n");
             }else if(this.left!= null&& this.right==null){
                 debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: NULL" +")");
+                        ",next chStr: " + t.next.chStr + ",Left chStr: " + t.left.chStr + ",Right chStr: NULL" +")\n");
             }else if(this.left == null && this.right!=null){
                 debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: NULL"  + ",Right chStr: " + t.right.chStr +")");
+                        ",next chStr: " + t.next.chStr + ",Left chStr: NULL"  + ",Right chStr: " + t.right.chStr +")\n");
             }else if(t.next != null){
                 debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: " + t.next.chStr + ",Left chStr: " + "null" + ",Right chStr: " +"null" +")");
+                        ",next chStr: " + t.next.chStr + ",Left chStr: " + "null" + ",Right chStr: " +"null" +")\n");
             }else{
                 debugFile.write("(chStr: "+this.chStr + ",Frequency: " + this.frequency + ",code: " + this.code +
-                        ",next chStr: NULL,Left chStr:NULL,Right chStr: NULL" + ")");
+                        ",next chStr: NULL,Left chStr:NULL,Right chStr: NULL" + ")\n");
             }
 
         }catch (IOException e){
