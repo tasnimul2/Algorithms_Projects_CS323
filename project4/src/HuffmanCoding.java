@@ -60,7 +60,7 @@ public class HuffmanCoding {
     }
 
     //algorithm given
-    public void constructHuffmanLList(FileWriter debugFile){
+    public LinkedList constructHuffmanLList(FileWriter debugFile){
         LinkedList list = new LinkedList(); //creates a linked list with a dummy node (“dummy” ,0, , null, null, null)
         int index = 0;
         while(index < 256){
@@ -72,31 +72,53 @@ public class HuffmanCoding {
             }
             index++;
         }
+        return list;
     }
 
     //algorithm given
-    public void constructHuffmanBinTree(TreeNode head, FileWriter debugFile){
-        TreeNode newNode = new TreeNode("",0,"",null,null,null);
-        TreeNode temp = head;
-        LinkedList list = new LinkedList();;
-        while(head.next.next != null){
-            newNode.setFrequency(head.next.getFrequency() + head.next.next.getFrequency());
-            newNode.setChStr(head.next.getChStr()+ head.next.next.getChStr());
-            newNode.left = head.next;
-            newNode.right = head.next.next;
-            newNode.next = null;
-            list.insertNewNode(newNode);
-            head.next = head.next.next;
-            list.printList(debugFile);
+    public BinaryTree constructHuffmanBinTree(LinkedList list,FileWriter debugFile){
+        BinaryTree tree = new BinaryTree();
+        try {
+            debugFile.write("\n \n *** CONSTRUCTING HUFFMAN BINARY TREE \n");
+            //TreeNode curr = list.getListHead();
+            TreeNode newNode ;
+            TreeNode tmp = new TreeNode();
+            while(list.getListHead().next.next != null){
+                newNode =  new TreeNode();
+                newNode.chStr= list.getListHead().next.getChStr() + list.getListHead().next.next.chStr;
+                newNode.frequency = list.getListHead().next.getFrequency() + list.getListHead().next.next.frequency;
+                newNode.left = list.getListHead().next;
+                newNode.right = list.getListHead().next.next;
+                newNode.next = null;
+                list.insertNewNode(newNode);
+                tmp = newNode;
+                list.getListHead().next = list.getListHead().next.next.next;
+                list.printList(debugFile);
+            }
+
+            tree.root = tmp;
+        }catch (IOException e){
+            System.out.println("error in constructHuffmanBinTree");
+        }catch (NullPointerException e){
+            System.out.println("Null pointer exception in constructHuffmanBinTree");
+
         }
-        BinaryTree tree = new BinaryTree(list.getListHead().next);
-        head = temp;
+
+        return tree;
     }
 
     // It will NOT output the codes to an out file,
     // instead the codes will be stored in the charCode array.
     //algorithm given
-    public void constructCharCode(TreeNode t, String[] charCode){
+    public void constructCharCode(TreeNode t, String inputCode){
+        if(t.left == null && t.right == null){
+            t.code = inputCode;
+            int index = (int)t.chStr.charAt(0);
+            charCode[index] = inputCode;
+        }else{
+            constructCharCode(t.left,inputCode+"0");
+            constructCharCode(t.right,inputCode+"1");
+        }
 
     }
 

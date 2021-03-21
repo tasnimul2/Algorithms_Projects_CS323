@@ -1,7 +1,7 @@
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class BinaryTree {
+public class BinaryTree extends TreeNode {
     public TreeNode root;
 
     //- constructor(s)

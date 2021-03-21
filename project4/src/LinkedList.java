@@ -48,14 +48,14 @@ public class LinkedList {
         if(isEmpty()) {
             listHead.next = node;
             listTail = node;
-            size++;
+            this.size++;
         }else{
             while(curr.next != null){
                 if(node.getFrequency() < curr.next.getFrequency()){
                     TreeNode tmp2 = curr.next;
                     curr.next = node;
                     node.next = tmp2;
-                    size++;
+                    this.size++;
                     break;
                 }
                 curr = curr.next;
@@ -69,12 +69,11 @@ public class LinkedList {
         TreeNode curr = listHead;
         TreeNode temp = listHead;
         try {
+            debugFile.write("***PRINTING LINKED LIST*** \n");
             while (curr != null) {
                 curr.printNode(curr, debugFile);
-                debugFile.write("-->");
                 curr = curr.next;
             }
-            debugFile.write("NULL \n");
             curr = temp;
         }catch (IOException e){
             System.out.println("error in printList");
@@ -82,9 +81,10 @@ public class LinkedList {
     }
 
     public boolean isEmpty(){
-        if(size == 0){
+        if(listHead.next == null){
             return true;
         }
         return false;
     }
+
 }

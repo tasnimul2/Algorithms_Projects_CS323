@@ -11,19 +11,30 @@ public class Main {
             File inFile = new File(nameInFile);
             String nameDebugFile = nameInFile.substring(0,nameInFile.length()-4)+"_DeBug.txt";
             FileWriter debugFile = new FileWriter(nameDebugFile);
-            /*
+
             LinkedList list = new LinkedList();
             list.insertNewNode(new TreeNode("1",8,"-1",null,null,null));
             list.insertNewNode(new TreeNode("2",3,"-1",null,null,null));
             list.insertNewNode(new TreeNode("3",2,"-1",null,null,null));
             list.insertNewNode(new TreeNode("4",5,"-1",null,null,null));
 
-            //list.printList(debugFile);
-             */
+            list.printList(debugFile);
+
             HuffmanCoding huffman = new HuffmanCoding();
             huffman.computeCharCounts(inFile);
             huffman.printCountAry(debugFile);
-            huffman.constructHuffmanLList(debugFile);
+            LinkedList head = huffman.constructHuffmanLList(debugFile);
+            BinaryTree tree = huffman.constructHuffmanBinTree(head,debugFile);
+            huffman.constructCharCode(tree.root,"");
+            debugFile.write("\n PRINTING LINKED LIST \n");
+            head.printList(debugFile);
+            debugFile.write("\n PREORDER TREE TRAVERSAL \n");
+            tree.preOrderTraversal(tree.root,debugFile);
+            debugFile.write("\n POSTORDER TREE TRAVERSAL \n");
+            tree.postOrderTraversal(tree.root,debugFile);
+            debugFile.write("\n INORDER TREE TRAVERSAL \n");
+            tree.inOrderTraversal(tree.root,debugFile);
+
             debugFile.close();
         }catch (IOException e){
             System.out.println("Exception in main method");
