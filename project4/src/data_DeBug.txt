@@ -1,0 +1,5 @@
+(chStr: DUMMY,Frequency: -1,code: DUMMY,next chStr: 1,Left chStr: null,Right chStr: null)
+(chStr: 1,Frequency: 0,code: -1,next chStr: 2,Left chStr: null,Right chStr: null)
+(chStr: 2,Frequency: 0,code: -1,next chStr: 3,Left chStr: null,Right chStr: null)
+(chStr: 3,Frequency: 0,code: -1,next chStr: 4,Left chStr: null,Right chStr: null)
+(chStr: 4,Frequency: 0,code: -1,next chStr: NULL,Left chStr:NULL,Right chStr: NULL)
