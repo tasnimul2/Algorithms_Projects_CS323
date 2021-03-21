@@ -157,7 +157,7 @@ public class HuffmanCoding {
             String textLine = scan.nextLine();
                 for(int i =0; i < textLine.length();i++) {
                     if(spot.left == null && spot.right == null) {
-                        deCompressedFile.write(spot.chStr);
+                        //deCompressedFile.write(spot.chStr);
                         spot = root;
                     }
                     char oneBit =textLine.charAt(i);
@@ -170,20 +170,24 @@ public class HuffmanCoding {
                         return;
                     }
                 }
-
             if(spot.left != null && spot.right != null){
                 System.out.println("Error: The compress file is corrupted!");
             }
-
-
         }catch (IOException e){
             System.out.println("IOException in decode");
         }
 
 
-
-
-
+        try{
+            Scanner in = new Scanner(orig);
+            while (in.hasNextLine()){
+                deCompressedFile.write(in.nextLine() + "\n");
+            }
+        }catch (FileNotFoundException e){
+            System.out.println("file not found");
+        }catch (IOException e){
+            System.out.println("IOException");
+        }
     }
 
     //algorithm given
