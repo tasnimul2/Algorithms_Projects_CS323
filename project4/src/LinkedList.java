@@ -1,4 +1,6 @@
+
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class LinkedList {
     private TreeNode listHead; // point to a dummy node!
@@ -41,15 +43,30 @@ public class LinkedList {
     // Insert a newNode into the linked list, in ascending order. Re-use your
     // old code from your previous project.
     public void insertNewNode(TreeNode node){
+        TreeNode curr = listHead;
+        TreeNode temp = listHead;
         if(isEmpty()) {
             listHead.next = node;
             listTail = node;
             size++;
         }else{
-
+            while(curr.next != null){
+                if(node.getFrequency() < curr.next.getFrequency()){
+                    TreeNode tmp2 = curr.next;
+                    curr.next = node;
+                    node.next = tmp2;
+                    size++;
+                    break;
+                }
+                curr = curr.next;
+            }
+            curr = temp;
+            /*
             listTail.next = node;
             listTail = node;
             size++;
+
+             */
         }
     }
 
@@ -57,12 +74,17 @@ public class LinkedList {
     public void printList(FileWriter debugFile){
         TreeNode curr = listHead;
         TreeNode temp = listHead;
-
-        while(curr != null){
-            curr.printNode(curr,debugFile);
-            curr = curr.next;
+        try {
+            while (curr != null) {
+                curr.printNode(curr, debugFile);
+                debugFile.write("-->");
+                curr = curr.next;
+            }
+            debugFile.write("NULL");
+            curr = temp;
+        }catch (IOException e){
+            System.out.println("error in printList");
         }
-        curr = temp;
     }
 
     public boolean isEmpty(){

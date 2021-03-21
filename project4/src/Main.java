@@ -11,10 +11,10 @@ public class Main {
             String nameDebugFile = nameInFile.substring(0,nameInFile.length()-4)+"_DeBug.txt";
             FileWriter debugFile = new FileWriter(nameDebugFile);
             LinkedList list = new LinkedList();
-            list.insertNewNode(new TreeNode("1",0,"-1",null,null,null));
-            list.insertNewNode(new TreeNode("2",0,"-1",null,null,null));
-            list.insertNewNode(new TreeNode("3",0,"-1",null,null,null));
-            list.insertNewNode(new TreeNode("4",0,"-1",null,null,null));
+            list.insertNewNode(new TreeNode("1",8,"-1",null,null,null));
+            list.insertNewNode(new TreeNode("2",3,"-1",null,null,null));
+            list.insertNewNode(new TreeNode("3",2,"-1",null,null,null));
+            list.insertNewNode(new TreeNode("4",5,"-1",null,null,null));
 
             list.printList(debugFile);
             debugFile.close();

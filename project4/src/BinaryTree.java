@@ -9,6 +9,9 @@ public class BinaryTree {
     }
      // see algorithm below
     public void preOrderTraversal(TreeNode root, FileWriter debugFile){
+        if(root == null){
+            return;
+        }
 
     }
 
