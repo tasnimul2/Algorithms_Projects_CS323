@@ -35,6 +35,7 @@ public class Main {
             debugFile.write("\n INORDER TREE TRAVERSAL \n");
             tree.inOrderTraversal(tree.root,debugFile);
 
+            huffman.userInterface(debugFile,tree.root);
             debugFile.close();
         }catch (IOException e){
             System.out.println("Exception in main method");

@@ -1,8 +1,6 @@
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
+
+import java.io.*;
 import java.util.Scanner;
 
 public class HuffmanCoding {
@@ -123,18 +121,101 @@ public class HuffmanCoding {
     }
 
     //algorithm given
-    public void encode(File originalFile, FileWriter compressedFile){
+    public void encode(File originalFile, FileWriter compressedFile,FileWriter debugFile){
+        try{
+            Scanner scan = new Scanner(originalFile);
+            String code="";
+            while (scan.hasNextLine()){
+                String textLine = scan.nextLine();
+                for(int i =0; i < textLine.length();i++){
+                    char charIn = textLine.charAt(i);
+                    int index = (int) charIn;
+                    if(index >= 0 && index < 256) {
+                        code = charCode[index];
+                    }
+                    if(code!=null){
+                        debugFile.write("char:"+ index + " " + code+ "\n");
+                        compressedFile.write(code);
+                    }
 
+                }
+            }
+        }catch (FileNotFoundException e){
+            System.out.println("file not found to encode");
+        }catch (IOException e){
+            System.out.println("IoException in encode");
+        }
     }
 
     //algorithm given
 
-    public void decode(File compressedFile, FileWriter deCompressedFile){
+    public void decode(File compressedFile, FileWriter deCompressedFile,File orig ,TreeNode root){
+        TreeNode spot = root;
+        Scanner scan;
+        try{
+            scan = new Scanner(compressedFile);
+            String textLine = scan.nextLine();
+                for(int i =0; i < textLine.length();i++) {
+                    if(spot.left == null && spot.right == null) {
+                        deCompressedFile.write(spot.chStr);
+                        spot = root;
+                    }
+                    char oneBit =textLine.charAt(i);
+                    if(oneBit == '0'){
+                        spot = spot.left;
+                    }else if(oneBit == '1' ){
+                        spot = spot.right;
+                    }else{
+                        System.out.println("Error! The compress file contains invalid character!");
+                        return;
+                    }
+                }
+
+            if(spot.left != null && spot.right != null){
+                System.out.println("Error: The compress file is corrupted!");
+            }
+
+
+        }catch (IOException e){
+            System.out.println("IOException in decode");
+        }
+
+
+
+
 
     }
 
     //algorithm given
-    public void userInterface(){
+    public void userInterface(FileWriter debugFile, TreeNode root) {
+        String nameOrg,nameCompress,nameDeCompress;
+        char yesNo;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Compress File?");
+        yesNo = in.nextLine().charAt(0);
+        if(yesNo == 'N'|| yesNo == 'n'){
+            return;
+        }else{
+            System.out.println("Enter the name (without .txt ) of the file to be compressed");
+            nameOrg = in.nextLine();
+        }
+        nameCompress = nameOrg + "_Compressed.txt";
+        nameDeCompress = nameOrg + "_DeCompress.txt";
+        nameOrg = nameOrg+".txt";
+
+        try {
+            File orgFile = new File(nameOrg);
+            FileWriter compFile = new FileWriter(nameCompress);
+            FileWriter deCompFile = new FileWriter(nameDeCompress);
+            encode(orgFile,compFile,debugFile);
+            compFile.close();
+            File compressedFile = new File(nameCompress);
+            decode(compressedFile,deCompFile,orgFile,root);
+
+            deCompFile.close();
+        }catch (IOException e){
+            System.out.println("Exception in User Interface");
+        }
 
     }
 
