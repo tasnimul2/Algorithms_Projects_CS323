@@ -45,10 +45,7 @@ public class TreeNode {
         this.next = next;
 
     }
-    public TreeNode(){
-
-    }
-
+    public TreeNode(){}
     // format: (T’s chStr, T’s frequency, T’s code, T’s next chStr, T’s left’s chStr, T ‘s right’s chStr);
     //one print per text
     public void printNode(TreeNode t, FileWriter debugFile){

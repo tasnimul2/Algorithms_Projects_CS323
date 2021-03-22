@@ -117,9 +117,7 @@ public class HuffmanCoding {
             constructCharCode(t.left,inputCode+"0");
             constructCharCode(t.right,inputCode+"1");
         }
-
     }
-
     //algorithm given
     public void encode(File originalFile, FileWriter compressedFile,FileWriter debugFile){
         try{
