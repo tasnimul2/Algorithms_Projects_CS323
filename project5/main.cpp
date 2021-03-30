@@ -71,7 +71,7 @@ class Image{
 
 class QtTreeNode{
     public:
-    int color = 0; //0 1 or 5
+    int color = -1; //0 1 or 5
     int upperR = 0; // the row coordinate of the upper corner of the image area in which this node is representing
     int upperC = 0; // the column coordinate of the upper corner of the image area in which this node is representing
     int size = 0;
@@ -118,8 +118,65 @@ class QtTreeNode{
         }else{
             se = to_string(SEkid->color);
         }
+        //outFile2 << ",NW:"<< nw<< ",NE:" << ne << ",SW:" << sw << ",SE:" << se << ")"  << endl;
         outFile2 << "(Color:" << this->color << ",UR:" << this->upperR << ",UC:" << this->upperC << ",NW:"
             << nw << ",NE:" << ne << ",SW:" << sw << ",SE:" << se << ")"<<endl;
+    }
+
+};
+
+class QuadTree {
+    public:
+    QtTreeNode* QtRoot;
+    //algorithm given
+    QtTreeNode* buildQuadTree(int** arr,int upR, int upC, int size, ofstream &outFile2){
+        QtTreeNode* node = new QtTreeNode(upR,upC,size,NULL,NULL,NULL,NULL);
+        outFile2 << "New Node: ";
+        node->printQtNode(outFile2);
+
+        if(size == 1){
+            node->color = arr[upR][upC];
+        }else{
+            int halfSize = size/2;
+            node->NWkid = buildQuadTree(arr,upR,upC,halfSize,outFile2);
+            node->NEkid = buildQuadTree (arr, upR, upC + halfSize, halfSize,outFile2);
+            node->SWkid = buildQuadTree (arr, upR + halfSize, upC, halfSize,outFile2);
+            node->SEkid = buildQuadTree (arr, upR + halfSize, upC + halfSize, halfSize,outFile2);
+            int sumColors = node->NWkid->color + node->NEkid->color + node->SWkid->color + node->SEkid->color;
+
+            if(sumColors == 0){
+                node->color = 0;
+                node->NWkid = NULL;
+                node->NEkid = NULL;
+                node->SWkid = NULL;
+                node->SEkid = NULL;
+            }else if (sumColors == 4){
+                node->color = 1;
+                node->NWkid = NULL;
+                node->NEkid = NULL;
+                node->SWkid = NULL;
+                node->SEkid = NULL;
+            }else{
+                node->color = 5;
+            }
+        }
+        return node;
+    }
+    // returns true if node is a quadtree leaf node, otherwise returns false.
+    bool isLeaf (QtTreeNode* node){
+
+        if(node->NEkid == NULL && node->NWkid == NULL && node->SWkid == NULL && node->SEkid == NULL){
+            return true;
+        }
+        return false;
+    }
+    //algorithms given
+    void preOrder(){
+
+    }
+
+    void postOrder(){
+
     }
 };
 
@@ -149,6 +206,7 @@ int main(int argc, char* argv[]){
     int **arr = myimg->getImgAry();
 
     //output imgAry to outFile2 with caption
+    output2 <<"Image after power2size x power2size dimenstions adjustment" << endl;
     for(int i = 0 ; i < myimg->power2size; i++){
         for(int j = 0; j < myimg->power2size; j++){
             output2 << arr[i][j] << " ";
@@ -157,7 +215,7 @@ int main(int argc, char* argv[]){
     }
 
     //Need to do step 6 to 9.
-    
+
     /*
     QtTreeNode* nodea =  new QtTreeNode(0,1,1,NULL,NULL,NULL,NULL);
     //nodea->color = 1;
@@ -165,6 +223,9 @@ int main(int argc, char* argv[]){
     node1->printQtNode(output2);
     nodea->printQtNode(output2);
     */
+
+   QuadTree* qTree;
+   qTree->QtRoot = qTree->buildQuadTree(myimg->getImgAry(),0,0,myimg->power2size,output2);
     
 
 }
