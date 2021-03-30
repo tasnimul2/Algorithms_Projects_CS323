@@ -118,7 +118,6 @@ class QtTreeNode{
         }else{
             se = to_string(SEkid->color);
         }
-        //outFile2 << ",NW:"<< nw<< ",NE:" << ne << ",SW:" << sw << ",SE:" << se << ")"  << endl;
         outFile2 << "(Color:" << this->color << ",UR:" << this->upperR << ",UC:" << this->upperC << ",NW:"
             << nw << ",NE:" << ne << ",SW:" << sw << ",SE:" << se << ")"<<endl;
     }
@@ -133,7 +132,6 @@ class QuadTree {
         QtTreeNode* node = new QtTreeNode(upR,upC,size,NULL,NULL,NULL,NULL);
         outFile2 << "New Node: ";
         node->printQtNode(outFile2);
-
         if(size == 1){
             node->color = arr[upR][upC];
         }else{
@@ -171,12 +169,28 @@ class QuadTree {
         return false;
     }
     //algorithms given
-    void preOrder(){
-
+    void preOrder(QtTreeNode* root,ofstream &outFile1){
+        if(isLeaf(root)){
+            root->printQtNode(outFile1);
+        }else{
+            root->printQtNode(outFile1);
+            preOrder(root->NWkid,outFile1);
+            preOrder(root->NEkid,outFile1);
+            preOrder(root->SWkid,outFile1);
+            preOrder(root->SEkid,outFile1);
+        }
     }
 
-    void postOrder(){
-
+    void postOrder(QtTreeNode* root,ofstream &outFile1){
+        if(isLeaf(root)){
+            root->printQtNode(outFile1);
+        }else{
+            preOrder(root->NWkid,outFile1);
+            preOrder(root->NEkid,outFile1);
+            preOrder(root->SWkid,outFile1);
+            preOrder(root->SEkid,outFile1);
+            root->printQtNode(outFile1);
+        }
     }
 };
 
@@ -214,18 +228,17 @@ int main(int argc, char* argv[]){
         output2 << endl;
     }
 
-    //Need to do step 6 to 9.
-
-    /*
-    QtTreeNode* nodea =  new QtTreeNode(0,1,1,NULL,NULL,NULL,NULL);
-    //nodea->color = 1;
-    QtTreeNode* node1 =  new QtTreeNode(0,1,1,nodea,NULL,NULL,nodea);
-    node1->printQtNode(output2);
-    nodea->printQtNode(output2);
-    */
+    //steps 6 to 9.
 
    QuadTree* qTree = new QuadTree();
    qTree->QtRoot = qTree->buildQuadTree(myimg->getImgAry(),0,0,myimg->power2size,output2);
-    
+   output1<< "**************PRE ORDER TRAVERSAL **************"<<endl;
+   qTree->preOrder(qTree->QtRoot,output1);
+   output1<<endl;
+   output1<< "**************POST ORDER TRAVERSAL **************"<<endl;
+   qTree->postOrder(qTree->QtRoot,output1);
 
+   input.close();
+   output1.close();
+   output2.close();
 }
