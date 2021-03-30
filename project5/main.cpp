@@ -224,7 +224,7 @@ int main(int argc, char* argv[]){
     nodea->printQtNode(output2);
     */
 
-   QuadTree* qTree;
+   QuadTree* qTree = new QuadTree();
    qTree->QtRoot = qTree->buildQuadTree(myimg->getImgAry(),0,0,myimg->power2size,output2);
     
 
