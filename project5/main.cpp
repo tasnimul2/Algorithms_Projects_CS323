@@ -14,6 +14,7 @@ class Image{
     int **imgAry ; //a 2D array, need to dynamically allocate at run time of size power2Size by power2Size.
     
     Image(){}
+
     Image(int row, int col, int min, int max, ofstream &outFile2){
         power2size = computePower2(row,col);
         outFile2 << "power2size: " << power2size << endl;
@@ -39,19 +40,20 @@ class Image{
         }
         return power2;
     }
-    
+
     //load the input data onto imgAry, begins at (0, 0)
     void loadImage (ifstream &inFile) {
         int data;
         while(!inFile.eof()){
-            for(int r = 0; r < power2size; r++){
-                for(int c = 0; c < power2size; c++){
+            for(int r = 0; r < numRows; r++){
+                for(int c = 0; c < numCols; c++){
                     inFile >> data;
                     imgAry[r][c] = data;
                 }
-            }
-        }
+            }//end of outer for loop
+        }//end of while loop
     }
+
     // set the given 2D array to zero
     void zero2DAry(){
         for(int i = 0 ; i < power2size; i++){
@@ -60,14 +62,65 @@ class Image{
             }
         }
     }
-
+    
+    //return the imgArray
     int** getImgAry(){
         return imgAry;
     }
+};
 
+class QtTreeNode{
+    public:
+    int color = 0; //0 1 or 5
+    int upperR = 0; // the row coordinate of the upper corner of the image area in which this node is representing
+    int upperC = 0; // the column coordinate of the upper corner of the image area in which this node is representing
+    int size = 0;
 
-
-  
+    QtTreeNode* NWkid = NULL;
+    QtTreeNode* NEkid = NULL;
+    QtTreeNode* SWkid = NULL;
+    QtTreeNode* SEkid = NULL;
+    QtTreeNode(){};
+    QtTreeNode(int upR, int upC,int sze,QtTreeNode* Nwkid,QtTreeNode* Nekid,QtTreeNode* Swkid, QtTreeNode*Sekid){
+        upperR = upR;
+        upperC = upC;
+        size = sze;
+        NWkid = Nwkid;
+        NEkid = Nekid;
+        SWkid = Swkid;
+        SEkid = Sekid;
+    }
+    // output the given node’s: color, upperR, upperC, NWkid’s color, NEkid’s color,
+    //SWkid’s color, SEkid’s color), one node per text line
+    void printQtNode(ofstream &outFile2){
+        string nw = "";
+        string ne = "";
+        string sw = "";
+        string se = "";
+     
+        if(NEkid == NULL){
+            ne = "NULL";
+        }else{
+            ne = to_string(NEkid->color);
+        }
+        if(NWkid == NULL){
+            nw = "NULL";
+        }else{
+            nw = to_string(NWkid->color);
+        }
+        if(SWkid == NULL){
+            sw = "NULL";
+        }else{
+            sw = to_string(SWkid->color);
+        }
+        if(SEkid == NULL){
+            se = "NULL";
+        }else{
+            se = to_string(SEkid->color);
+        }
+        outFile2 << "(Color:" << this->color << ",UR:" << this->upperR << ",UC:" << this->upperC << ",NW:"
+            << nw << ",NE:" << ne << ",SW:" << sw << ",SE:" << se << ")"<<endl;
+    }
 };
 
 int main(int argc, char* argv[]){
@@ -105,6 +158,13 @@ int main(int argc, char* argv[]){
 
     //Need to do step 6 to 9.
     
+    /*
+    QtTreeNode* nodea =  new QtTreeNode(0,1,1,NULL,NULL,NULL,NULL);
+    //nodea->color = 1;
+    QtTreeNode* node1 =  new QtTreeNode(0,1,1,nodea,NULL,NULL,nodea);
+    node1->printQtNode(output2);
+    nodea->printQtNode(output2);
+    */
     
 
 }
