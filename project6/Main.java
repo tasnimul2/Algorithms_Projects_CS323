@@ -15,7 +15,6 @@
             this.jobId = id;
             this.jobTime = time;
         }
-
     }
 //------------------------------SCHEDULE CLASS------------------------------------------//
     public static class Schedule{
@@ -204,8 +203,6 @@
          * // if found returns i, else returns -1, means no available processor.**/
 
         public static int getNextProc (int currentTime){
-            //System.out.println("total job time"+totalJobTime);
-            //System.out.println("current job time" + currentTime);
             for(int i = 0; i < numProcs+1  ; i++){
                 if(table[i][currentTime] == 0){
                     return i;
@@ -357,20 +354,15 @@
                         Node newNode = new Node(jobId, Schedule.jobTimeAry[jobId]);
                         Schedule.openInsert(newNode);
                         Schedule.printOpen(outFile2); // debug print
-                        //System.out.println("JOB ID: " + jobId);
-                        //jobId = Schedule.findOrphan();
                     }
                 }
 
                 int availProc = 0;//step 6
-                //repeat step 6 while availProc >= 0 && OPEN is not empty && procUsed < numProcs
-                System.out.println(Schedule.isOpenEmpty());
                 while (availProc >= 0 && !Schedule.isOpenEmpty() && Schedule.procUsed < Schedule.numProcs ) {
                     availProc = Schedule.getNextProc(Schedule.currentTime);
                     if(availProc >= 0) {
                         Node newJob = Schedule.openRemove();
                         Schedule.putJobOnTable(availProc, Schedule.currentTime, newJob.jobId, newJob.jobTime);
-                        System.out.println("processors used:" + Schedule.procUsed);
                         if (availProc > Schedule.procUsed) {
                             Schedule.procUsed++;
                         }
@@ -386,21 +378,12 @@
                 Schedule.currentTime++;
 
 
-
-                System.out.println("Current Time:" + Schedule.currentTime);
-
                 int proc = 0;
-                System.out.println("proc"+ proc);
-                System.out.println("proc used" + Schedule.procUsed);
                 while (proc < Schedule.procUsed) {
-                    System.out.println("enter while");
+
                     if (Schedule.table[proc][Schedule.currentTime] <= 0 && Schedule.table[proc][Schedule.currentTime - 1] > 0) {
-                        // the processor, proc, just finished a job in the // previous time cycle.
-                        System.out.println("inner proc"+ proc);
-                        System.out.println("inner proc used" + Schedule.procUsed);
                         jobId = Schedule.table[proc][Schedule.currentTime - 1];
                         Schedule.deleteJob(jobId);
-                        //Schedule.procUsed--;
                     }
                     Schedule.printMatrix(outFile2);
                     proc++;
