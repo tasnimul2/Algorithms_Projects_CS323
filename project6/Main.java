@@ -373,6 +373,8 @@
                 boolean hasCycle = Schedule.checkCycle();
                 if (hasCycle) {
                     System.out.println("There is a cycle in the graph!!!");
+                    outFile1.write("There is a cycle in the graph!!!");
+                    outFile2.write("There is a cycle in the graph!!!");
                 }
 
                 Schedule.currentTime++;
@@ -380,7 +382,6 @@
 
                 int proc = 0;
                 while (proc < Schedule.procUsed) {
-
                     if (Schedule.table[proc][Schedule.currentTime] <= 0 && Schedule.table[proc][Schedule.currentTime - 1] > 0) {
                         jobId = Schedule.table[proc][Schedule.currentTime - 1];
                         Schedule.deleteJob(jobId);
