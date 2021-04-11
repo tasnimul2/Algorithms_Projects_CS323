@@ -128,6 +128,7 @@
                     }
                     outFile2.write("\n");
                 }
+                outFile2.write("\n");
             }catch (IOException e){
                 System.out.println("IOException in printMatrix");
             }
@@ -203,7 +204,9 @@
          * // if found returns i, else returns -1, means no available processor.**/
 
         public static int getNextProc (int currentTime){
-            for(int i = 0; i < numProcs +1 ; i++){
+            //System.out.println("total job time"+totalJobTime);
+            //System.out.println("current job time" + currentTime);
+            for(int i = 0; i < numProcs+1  ; i++){
                 if(table[i][currentTime] == 0){
                     return i;
                 }
@@ -213,7 +216,19 @@
 
         //algo given
         public static void putJobOnTable (int availProc, int currentTime, int jobID, int jobTime) {
+            int time = currentTime;
+            int endTime = time + jobTime;
+            while(time < endTime) {
+                table[availProc][time] = jobID;
+                time++;
+            }
+            //added this in to free used processors
+            /*
+            if(table[availProc][time] <= 0){
+                procUsed--;
+            }
 
+             */
         }
         /**
          * // print the scheduleTable upto the currentTime slot to outFile1,
@@ -221,12 +236,13 @@
 
         public static void printTable (FileWriter outFile1,int currentTime){
             try{
+                outFile1.write("      ");
                 for(int x = 0; x < totalJobTime; x++){
-                    outFile1.write("      "+ x);
+                    outFile1.write(" "+ x);
                 }
                 outFile1.write("\n");
                 for(int x = 0; x <= totalJobTime; x++){
-                    outFile1.write("--------");
+                    outFile1.write("--");
                 }
                 outFile1.write("\n");
                 for(int i = 0; i < numProcs;i++){
@@ -237,7 +253,7 @@
                     outFile1.write("\n");
                 }
                 for(int x = 0; x <= totalJobTime; x++){
-                    outFile1.write("--------");
+                    outFile1.write("--");
                 }
                 outFile1.write("\n");
             }catch (IOException e){
@@ -257,7 +273,9 @@
          * else returns false**/
 
         public static boolean checkCycle(){
-
+            if(openSize == 0 && adjMatrix[0][0] != 0 && procUsed == 0){
+                return true;
+            }
             return false;
         }
 
@@ -266,7 +284,10 @@
          * //if AdjMatrix [0][0] == 0 returns true, else returns false. When you printMatrix, pay attention to
          * // the content of AdjMatrix [0][0].**/
         public static boolean isGraphEmpty (){
-            return adjMatrix[0][0] == 0;
+            if(adjMatrix[0][0] == 0){
+                return true;
+            }
+            return false ;
         }
         /**
          * // see algorithm steps below.
@@ -276,13 +297,18 @@
          * // 2) To delete a job's outgoing edges is to decrease all its dependents the parent counts by 1.
          * Note: the job's dependents are those none zero adjMatrix [jobID][j] > 0, on jobID row
          * For example, if adjMatrix [jobID][j] > 0, then decrease adjMatrix [0][j] by 1; adjMatrix [0][j]-- **/
-        public static void deleteJob(){
-
+        public static void deleteJob(int id){
+            adjMatrix[id][id] = 0; //delete job from the graph;
+            adjMatrix[0][0]--;
+            int j = 1;
+            while(j < numNodes) {
+                if (adjMatrix[id][j] > 0) { //if j is a dependent of job ID
+                    adjMatrix[0][j]--; //decrease j's parent count by 1
+                    //procUsed--; /** added this in to update used processes **/
+                }
+                j++;
+            }
         }
-
-
-
-        
     }
 
 
@@ -318,36 +344,72 @@
             Schedule.procUsed = 0;
             Schedule.loadMatrix(inFile1);
             Schedule.totalJobTime = Schedule.loadJobTimeAry(inFile2);
-            Schedule.table = new int[Schedule.numProcs+1][Schedule.totalJobTime+1];
+            Schedule.table = new int[Schedule.numProcs +1][Schedule.totalJobTime +1];
             Schedule.printTable(outFile1,Schedule.currentTime);
             Schedule.setMatrix();
             Schedule.printMatrix(outFile2);
-            int jobId = Schedule.findOrphan(); //this is Stop 3
-            while(jobId != -1){
-                Node newNode = new Node(jobId,Schedule.jobTimeAry[jobId]);
-                Schedule.openInsert(newNode);
-                Schedule.printOpen(outFile2); // debug print
-                jobId = Schedule.findOrphan();
-            }
 
-            int availProc =  Schedule.getNextProc(Schedule.currentTime);//step 6
-            //repeat step 6 while availProc >= 0 && OPEN is not empty && procUsed < numProcs
-            while (availProc >= 0 && !Schedule.isOpenEmpty() && Schedule.procUsed < Schedule.numProcs ){
-                Node newJob = Schedule.openRemove();
-                //putJobOnTable (availProc, currentTime, newJob.jobID, newJob.jobTime)
-            }
+            //while(!Schedule.isGraphEmpty()) {
+                int jobId = 0;
+                while (jobId != -1) {
+                    jobId = Schedule.findOrphan(); //this is Step 3
+                    if(jobId>0) {
+                        Node newNode = new Node(jobId, Schedule.jobTimeAry[jobId]);
+                        Schedule.openInsert(newNode);
+                        Schedule.printOpen(outFile2); // debug print
+                        //System.out.println("JOB ID: " + jobId);
+                        //jobId = Schedule.findOrphan();
+                    }
+                }
 
-            //need to finish from step 6
+                int availProc = 0;//step 6
+                //repeat step 6 while availProc >= 0 && OPEN is not empty && procUsed < numProcs
+                System.out.println(Schedule.isOpenEmpty());
+                while (availProc >= 0 && !Schedule.isOpenEmpty() && Schedule.procUsed < Schedule.numProcs ) {
+                    availProc = Schedule.getNextProc(Schedule.currentTime);
+                    if(availProc >= 0) {
+                        Node newJob = Schedule.openRemove();
+                        Schedule.putJobOnTable(availProc, Schedule.currentTime, newJob.jobId, newJob.jobTime);
+                        System.out.println("processors used:" + Schedule.procUsed);
+                        if (availProc > Schedule.procUsed) {
+                            Schedule.procUsed++;
+                        }
+                    }
+                }
+
+                Schedule.printTable(outFile1, Schedule.currentTime);
+                boolean hasCycle = Schedule.checkCycle();
+                if (hasCycle) {
+                    System.out.println("There is a cycle in the graph!!!");
+                }
+
+                Schedule.currentTime++;
 
 
+
+                System.out.println("Current Time:" + Schedule.currentTime);
+
+                int proc = 0;
+                System.out.println("proc"+ proc);
+                System.out.println("proc used" + Schedule.procUsed);
+                while (proc < Schedule.procUsed) {
+                    System.out.println("enter while");
+                    if (Schedule.table[proc][Schedule.currentTime] <= 0 && Schedule.table[proc][Schedule.currentTime - 1] > 0) {
+                        // the processor, proc, just finished a job in the // previous time cycle.
+                        System.out.println("inner proc"+ proc);
+                        System.out.println("inner proc used" + Schedule.procUsed);
+                        jobId = Schedule.table[proc][Schedule.currentTime - 1];
+                        Schedule.deleteJob(jobId);
+                        //Schedule.procUsed--;
+                    }
+                    Schedule.printMatrix(outFile2);
+                    proc++;
+                }
+           //}
+
+            Schedule.printTable(outFile1,Schedule.currentTime);
             outFile2.close();
             outFile1.close();
-
-
-
-
-
-
         }catch(FileNotFoundException e){
             System.out.println("File not found in Main(). Make sure it is located in this folder and check for spelling errors");
         }catch(IOException e){
