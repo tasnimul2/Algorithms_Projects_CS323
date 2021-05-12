@@ -11,6 +11,11 @@ public class AstarNode {
     //constructor
     public AstarNode(){}
 
+    public  AstarNode(int gStar, int hStar){
+        this.gStar = gStar;
+        this.hStar = hStar;
+    }
+
     /**
      * print only node's fStar, configuration, and parent's configuration, in one text line.
      * For example: if node's fStar is 9, its configuration is 6 3 4 8 7 0 5 2 1
