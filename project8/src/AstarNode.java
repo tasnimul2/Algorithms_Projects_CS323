@@ -5,8 +5,9 @@ public class AstarNode {
     int[] configuration = new int[9];
     int gStar = 0; // # moves so far from initial state to current state
     int hStar = 0; // the estimated moves from the currentNode to the goal stateNode
-    int fStar = gStar + hStar; // is gStar + hStar
+    int fStar; // is gStar + hStar
     AstarNode parent = null; //points to its parent node; initially point to null
+    AstarNode next = null;
 
     //constructor
     public AstarNode(){}
@@ -14,6 +15,7 @@ public class AstarNode {
     public  AstarNode(int gStar, int hStar){
         this.gStar = gStar;
         this.hStar = hStar;
+        this.fStar = gStar + hStar;
     }
 
     /**
