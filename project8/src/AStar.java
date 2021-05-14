@@ -4,14 +4,16 @@ import java.io.IOException;
 
 public class AStar {
 
-    AstarNode startNode;
-    AstarNode goalNode;
+    AstarNode startNode = new AstarNode();
+    AstarNode goalNode = new AstarNode();
 
     /** // Open = A sorted linked list with a dummy node.
      // It maintains an ordered list of nodes, w.r.t. the fStar value
      // Built your own linked list, you may not use Java built-in linked list.**/
     AstarNode Open;
     int openListSize = 0;
+    int closeListSize = 0;
+    int childListSize = 0;
 
     /**
      * // a linked list with a dummy node, can be sorted or unsorted.
@@ -99,9 +101,15 @@ public class AStar {
 
     // removes and returns the front node of OpenList after dummy.
     public AstarNode remove (){
-        AstarNode deleted = Open.next;
-        Open.next = Open.next.next;
-        return deleted;
+        if(!isOpenListEmpty()){
+            AstarNode deleted = Open.next;
+            Open.next = Open.next.next;
+            openListSize--;
+            return deleted;
+        }
+
+        return new AstarNode();
+
     }
 
 
@@ -132,9 +140,10 @@ public class AStar {
             AstarNode dummy = curr;
             dummy.next = childList.next;
             childList.next = dummy;
+            childListSize++;
             curr = curr.next;
         }
-        return childList.next;
+        return childList;
     }
 
     /**
@@ -150,10 +159,103 @@ public class AStar {
     //// Print the solution to outFile2, make it pretty to look at.
     public void printSolution (AstarNode currentNode, FileWriter outFile2){
 
+        try {
+            int counter = 0;
+            for (int i = 0; i <currentNode.configuration.length; i++){
+                outFile2.write(currentNode.configuration[i] + " ");
+                ++counter;
+                if(counter == 3){
+                    outFile2.write("\n");
+                    counter = 0;
+                }
+            }
+            outFile2.write("\n");
+        }catch (IOException e){
+            System.out.println("IOException is printSolution method in Astar.java");
+        }
     }
 
-    private boolean isOpenListEmpty(){
+    public void closeInset(AstarNode node){
+        AstarNode curr = Close;
+        AstarNode temp = Close;
+        boolean inserted = false;
+        if(isCloseListEmpty()){
+            curr.next = node;
+            closeListSize++;
+        }else{
+            while(curr.next != null){
+                if(node.fStar < curr.next.fStar){
+                    AstarNode tmp2 = curr.next;
+                    curr.next = node;
+                    node.next = tmp2;
+                    closeListSize++;
+                    inserted = true;
+                    break;
+                }
+                curr = curr.next;
+            }
+            if(!inserted){
+                curr.next = node;
+                inserted = true;
+            }
+        }
+        Close = temp;
+    }
+
+    // removes and returns the front node of OpenList after dummy.
+    public AstarNode closeRemove (){
+        AstarNode deleted = Close.next;
+        Close.next = Close.next.next;
+        closeListSize--;
+        return deleted;
+    }
+
+    public AstarNode childRemove (){
+        if(!isChildListEmpty()) {
+            AstarNode deleted = childList.next;
+            childList.next = childList.next.next;
+            childListSize--;
+            return deleted;
+        }
+        return new AstarNode();
+    }
+
+    public boolean containsOpenChild(AstarNode child){
+        AstarNode temp1 = Open;
+        while(Open.next != null){
+            if(Open == child){
+                return true;
+            }
+            Open = Open.next;
+        }
+        Open = temp1;
+        return false;
+    }
+
+    public boolean containsCloseChild(AstarNode child){
+
+        AstarNode temp2 = Close;
+
+        while(Close.next != null){
+            if(Close == child){
+                return true;
+            }
+            Close = Open.next;
+        }
+        Close = temp2;
+        return false;
+    }
+
+
+
+    public boolean isOpenListEmpty(){
         return openListSize == 0;
+    }
+    public boolean isCloseListEmpty(){
+        return closeListSize == 0;
+    }
+    public boolean isChildListEmpty(){
+        return childListSize == 0;
     }
 
 
